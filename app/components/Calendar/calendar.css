@@ -1,0 +1,267 @@
+.sectionCalendar{
+    position: relative;
+    padding-top: 160px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.calendarTextContainer{
+    background-color: #E2EEFC;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+.calendarTextContainer h2{
+    color: #003366;
+    font-size: 2.3rem;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    z-index: 997;
+}
+.calendarTextContainer p{
+    padding-top: 5px;
+    color: rgba(0, 59, 110, 0.678);
+    font-size: 0.8rem;
+    font-weight: 800;
+    line-height: 20px;
+    width: 50%;
+    text-align: center;
+    z-index: 997;
+}
+.backgroundEventos{
+    background: linear-gradient(to bottom, #E2EEFC,90%,  rgba(255, 255, 255, 0)100%);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.eventosTopConainer{
+    
+    padding: 20px;
+}
+.eventosTop{
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+.juvenil{
+    background-color: #85BEF4;
+    height: 120px;
+    width: 240px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #003366;
+    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.233);
+}
+.panamericano{
+    background-color: #286CC0;
+    width: 280px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);
+}
+.logoPanaContainer{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.logoPana{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.eventosBottomConainer{
+    
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.eventosBottom{
+    
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+
+.sudamericano{
+    background-color: #449CEC;
+    height: 120px;
+    width: 240px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #003366;
+    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);
+}
+.olimpicos{
+    background-color: #003366;
+    height: fit-content;
+    width: 270px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 4px 10px rgb(82, 82, 82);
+}
+.logoOlimpicoContainer{
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+}
+.logoOlimpico{
+    border-radius: 5px;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+
+.lineaTiempoContainer{
+    position: relative;
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: 20px 0px;
+}
+.lineaTiempo{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.separacionContainerCalendar2{
+        margin-bottom: 100px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 1;
+}
+.separacionContainerCalendar{
+    margin-bottom: 140px;
+}
+
+
+@media screen and (max-width: 1500px){
+    .sectionCalendar{
+        padding-top: 90px;
+    }
+    .separacionContainerCalendar{
+        display: none;
+        
+    }
+    .lineaTiempo{
+        width: 90%;
+    }
+    .separacionContainerCalendar2{
+        display: flex;
+}
+    .calendarTextContainer {
+        width: 100%;
+        height: fit-content;
+    }
+    .calendarTextContainer h2{
+        font-size: 1.7rem;
+        
+    }
+    .calendarTextContainer p{
+        width: 80%;
+        
+    }
+    .eventosTop{
+        width: 100%;
+        
+    }
+    .eventosBottom{
+        width: 100%;
+        
+    }
+    .juvenil{
+        width: fit-content;
+        height: fit-content;
+    }
+    .juvenil h3{
+        width: 50%;
+    }
+    .sudamericano{
+        width: fit-content;
+        height: fit-content;
+    }
+    .sudamericano h3{
+        width: 50%;
+    }
+    .panamericano{
+        width: 40%;
+        
+    }
+    .olimpicos{
+        width: 40%;
+    }
+    .logoOlimpicoContainer{
+        display: none;
+    }
+    .logoPanaContainer{
+        display: none;
+    }
+    .backgroundEventos{
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 560px){
+    .eventosTopConainer{
+        padding-bottom: 0px;
+    }
+    .eventosBottomConainer{
+        padding-top: 0px;
+    }
+    .sectionCalendar{
+        padding-top: 40px;
+    }
+    .calendarTextContainer {
+        padding-bottom: 5px;
+        
+    }
+    .calendarTextContainer h2{
+        font-size: 1.5rem;
+        
+    }
+    .calendarTextContainer p{
+        font-size: 0.7rem;
+        line-height: 17px;
+        
+    }
+    .juvenil{
+        width: 40%;
+    }
+    .sudamericano{
+        width: 48%;
+        
+    }
+    .panamericano{
+        width: 50%;
+        
+    }
+    
+    .backgroundEventos{
+        height: 50vh;
+    }
+}

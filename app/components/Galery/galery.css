@@ -1,0 +1,206 @@
+.galerySection{
+    position: relative;
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    margin-bottom: 70px;
+}
+.galeryTextContainer{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 998;
+}
+.galeryTextContainer h2{
+    color: aliceblue;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    color: #003366;
+    padding-bottom: 20px;
+    
+}
+.galeryTextContainer h3{
+    color: aliceblue;
+    font-size: 1.8rem;
+    
+    color: #003366;
+    font-weight: 300;
+}
+.irBoton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 2px solid #003366;
+    color: #003366;
+}
+
+.leftGaleryContainer{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.topPic{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    height: 20%;
+    
+}
+.bottomPicContainer{
+    padding-right: 40px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.leftPic{
+    display: flex;
+    justify-content: flex-end;
+    
+    width: 100%;
+}
+.rightPic{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+
+.rightGaleryContainer{
+    
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.bottomPic2{
+    
+    height: 22%;
+}
+.bottomPicContainer{
+    
+    height: 78%;
+    display: flex;
+    justify-content: center;
+}
+
+.leftPic2{
+    
+    width: 45%;
+}
+.rightPic2{
+    display: flex;
+    align-items: center;
+    
+    width: 55%;
+}
+
+.imagenGalery{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.effectGallery{
+    z-index: 997;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+    background: radial-gradient(circle, rgb(255, 255, 255) 16%, rgba(0, 51, 102, 0) 50%);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px){
+    .galerySection{
+        margin-top: 100px;
+        height: 70vh;
+    }
+    .galeryTextContainer h2{
+        font-size: 2rem;
+    }
+    .galeryTextContainer h3{
+        font-size: 1.5rem;
+    }
+    .irBoton{
+        width: 80px;
+        height: 25px;
+    }
+    .leftGaleryContainer{
+        width: 45%;
+    }
+    .rightGaleryContainer{
+        width: 45%;
+    }
+    .bottomPicContainer{
+        padding-right: 20px;
+    }
+    .bottomPic2{
+        height: 20%;
+    }
+    .bottomPicContainer{
+        height: 80%;
+    }
+    .leftPic2{
+        width: 40%;
+    }
+    .rightPic2{
+        width: 60%;
+    }
+    
+}
+@media screen and (max-width: 560px){
+    .galerySection{
+        margin-top: 100px;
+        height: 70vh;
+    }
+    .galeryTextContainer h2{
+        font-size: 1.5rem;
+        padding-bottom: 7px;
+    }
+    .galeryTextContainer h3{
+        font-size: 1rem;
+    }
+    .irBoton{
+        width: 50px;
+        height: 22px;
+    }
+    .leftGaleryContainer{
+        width: 45%;
+    }
+    .rightGaleryContainer{
+        width: 45%;
+    }
+    .bottomPicContainer{
+        padding-right: 20px;
+    }
+    .bottomPic2{
+        height: 20%;
+    }
+    .bottomPicContainer{
+        height: 80%;
+    }
+    .leftPic2{
+        width: 40%;
+    }
+    .rightPic2{
+        width: 60%;
+    }
+    
+}
+

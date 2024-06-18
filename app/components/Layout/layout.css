@@ -1,0 +1,444 @@
+.navBarContainer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+.scrolled{
+    background-color: #003366e0;
+    box-shadow: 0px 0px 5px #001a35a8;
+    
+}
+
+.navBarContainer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.014), rgba(255, 255, 255, 0.692), rgba(255, 255, 255, 0));
+}
+
+
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 90%;
+}
+.navBar ul{
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    list-style: none;
+    height: 100%;
+}
+.navBar li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.contenedorLogo{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    
+    height: auto;
+    width: 70%;
+}
+
+
+.sectionFooter{
+    display: flex;
+    justify-content: space-between;
+    background-color: #001325;
+    background: linear-gradient(to bottom, #011c35, 97%, #011529);
+    position: relative;
+}
+.footerSeparacion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 997;
+}
+.footerTextImage{
+    width: 70%;
+}
+.footerImageContainer{
+    position: relative;
+    background-color: black;
+    height: 700px;
+}
+.footerImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.effectFondoFooter{
+    background: linear-gradient(to right,#00132507, 40%,  #011c35);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.socials{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+    padding-top: 70px;
+    padding-left: 14%;
+    height: 250px;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contacto h3{
+    color: aliceblue;
+    font-size: 1.9rem;
+    
+    padding-bottom: 7px;
+}
+.contacto span{
+    color: rgba(240, 248, 255, 0.658);
+    font-size: 0.8rem;
+}
+.donaciones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.donaciones h3{
+    color: aliceblue;
+    font-size: 1.9rem;
+    
+    padding-bottom: 7px;
+}
+.donaciones span{
+    color: rgba(240, 248, 255, 0.658);
+    font-size: 0.8rem;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.redes h3{
+    color: aliceblue;
+    font-size: 1.9rem;
+    
+    padding-bottom: 7px;
+}
+.logosRedes{
+    display: flex;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.726);
+}
+.logosRedes a{
+    font-size: 1.3rem;
+}
+
+
+.formSection{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 120px;
+    
+}
+.contenedorForm{
+    background-color: rgb(255, 255, 255);
+    height: 80%;
+    width: 67%;
+    margin-left: 70px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+.fill{
+    height: 80%;
+    width: 100%;
+    padding: 0px 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    gap: 15px;
+}
+.fill input{
+    height: 38px;
+    width: 100%;
+    border: 0px;
+    background-color:  #0053a10e;
+    padding-left: 10px;
+    border-radius: 5px;
+    color: #003366;
+    font-size: 0.8rem;
+}
+.fill input:focus{
+    outline: none;
+    border: 1px solid #003366;
+}
+
+.fill textarea{
+    height: 70%;
+    width: 100%;
+    border: 0px;
+    background-color: #0053a10e;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    resize: none;
+    color: #003366;
+}
+.fill textarea:focus{
+    outline: none;
+    border: 1px solid #003366;
+}
+input::placeholder, textarea::placeholder {
+    color:  #01213f;
+    opacity: 1; 
+}
+.titleForm{
+    height: 40px;
+}
+.comunicate{
+    font-size: 1.3rem;
+    color: #003366;
+}
+.botonEnviarContainer{
+    width: 100%;
+    padding: 0px 35px;
+    display: flex;
+    align-items: center;
+}
+.botonEnviar{
+    border: 0px;
+    color: #003366;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff05;
+    border: 1px solid #003366;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.botonEnviar:hover{
+    color: white;
+    background-color: #0a3968;
+    font-weight: 300;
+    
+}
+
+@media screen and (max-width: 1500px) {
+    .navBar{
+        height: 90px;
+        width: 100%;
+    }
+    
+    .navBar ul{
+        gap: 5%;
+        width: 100%;
+    }
+    .navBar li{
+        width: 85px;
+        font-size: 1rem;
+    }
+    .contenedorLogo{
+        width: 70px;
+        
+    }
+    .logo{
+        
+        height: auto;
+        width: 100%;
+    }
+
+    .footerTextImage{
+        width: 60%;
+    }
+
+
+    .socials{
+        
+        justify-content: center;
+        gap: 10%;
+        padding-left: 0px;
+        height: 200px;
+        
+    }
+    .socials h3{
+        font-size: 1.3rem;
+    }
+
+    .footerImageContainer{
+        height: 600px;
+    }
+
+    .formSection{
+        width: 40%;
+        height: 600px;
+        justify-content: flex-start;
+        margin-top: 100px;
+        
+    }
+
+    .contenedorForm{
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+    .contenedorForm h3{
+        font-size: 1.1rem;
+    }
+    .botonEnviarContainer{
+        padding-bottom: 20px;
+    }
+    .botonEnviar{
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .navBar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+    }
+    
+    .navBar ul{
+        gap: 1%;
+    }
+    .navBar li{
+        width: 75px;
+        font-size: 0.8rem;
+    }
+    .contenedorLogo{
+        width: 50px;
+        margin-left: 15px;
+    }
+
+    .sectionFooter{
+        flex-direction: column-reverse;
+        
+    }
+
+    .footerTextImage{
+        width: 100%;
+    }
+
+    .footerImageContainer{
+        display: none;
+    }
+
+    .socials{
+        
+        justify-content: center;
+        gap: 9%;
+        padding-left: 0px;
+        height: 220px;
+        width: 100%;
+    }
+    .socials h3{
+        font-size: 1.2rem;
+    }
+
+    .formSection{
+        width: 100%;
+        height: 500px;
+        justify-content: center;
+        margin-top: 100px;
+        
+    }
+
+    .contenedorForm{
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 60%;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .contenedorForm h3{
+        font-size: 1.1rem;
+    }
+    .botonEnviarContainer{
+        padding-bottom: 20px;
+    }
+    .botonEnviar{
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width: 560px) {
+    
+    .navBar ul{
+        gap: 0.5%;
+        
+    }
+    .navBar li{
+        width: 60px;
+        font-size: 0.55rem;
+    }
+    .contenedorLogo{
+        width: 30px;
+        
+    }
+
+    .socials{
+        gap: 16%;
+        
+    }
+    .socials h3{
+        font-size: 0.9rem;
+    }
+    .socials span{
+        font-size: 0.6rem;
+    }
+
+
+    .contenedorForm{
+        width: 67%;
+        
+    }
+    .logosRedes{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+    }
+    .logosRedes a{
+        font-size: 1.3rem;
+    }
+    .redes{
+        position: absolute;
+        bottom: 0;
+    }
+    .redes h3{
+        display: none;
+    }
+}
