@@ -1,4 +1,9 @@
 "use client"
+import "../[miembro]/miembro.css";
+import Image from "next/image";
+import { comfortaa, sora } from "../fonts";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+
 import jorge from "../../public/assets/jorge.jpg";
 import tadeo from "../../public/assets/tadeo.jpg";
 import hernan from "../../public/assets/jorge.jpg";
@@ -6,12 +11,7 @@ import ale from "../../public/assets/jorge.jpg";
 import klaus from "../../public/assets/jorge.jpg";
 import martin from "../../public/assets/jorge.jpg";
 
-import { FaFacebook, FaFacebookSquare, FaInstagram } from "react-icons/fa";
-import { FaSquareXTwitter, FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
-import "../[miembro]/miembro.css";
 import { useEffect, useState } from "react";
-import { comfortaa, sora } from "../fonts";
-import Image from "next/image";
 const Card = ({ params }) => {
     const name = decodeURIComponent(params.miembro.replace(/[\[\]']+/g, ''));
     const [member, setMember] = useState({});
