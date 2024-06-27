@@ -4,12 +4,12 @@ import Image from "next/image";
 import { comfortaa, sora } from "../fonts";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-import jorge from "../../public/assets/jorge.jpg";
+import jorge from "../../public/assets/Jorge.jpg";
 import tadeo from "../../public/assets/tadeo.jpg";
-import hernan from "../../public/assets/jorge.jpg";
-import ale from "../../public/assets/jorge.jpg";
-import klaus from "../../public/assets/jorge.jpg";
-import martin from "../../public/assets/jorge.jpg";
+import hernan from "../../public/assets/Jorge.jpg";
+import ale from "../../public/assets/Jorge.jpg";
+import klaus from "../../public/assets/Jorge.jpg";
+import martin from "../../public/assets/Jorge.jpg";
 
 import { useEffect, useState } from "react";
 const Card = ({ params }) => {
