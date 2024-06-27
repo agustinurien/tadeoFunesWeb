@@ -1,0 +1,129 @@
+
+.sectionMember{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00336600;
+    padding-top: 80px;
+    height: 100vh;
+    margin-bottom: 120px;
+    
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+    box-shadow: 0 2px 15px #00254b57;;
+    border-radius: 10px;
+    color: #00254b;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    padding: 20px;
+    width: 100%;
+    gap: 40px;
+    border-radius: 10px;
+    border-bottom: 1px solid #d8d8d867;   
+}
+.imageMemberContainer{
+    height: 180px;
+    width: 160px;
+    
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 60%;
+    padding-top: 10px;
+}
+.info p{
+    font-size: 1.3rem;
+    padding-left: 10px;
+    color: #00254bcb;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 1rem;
+    color: #00254b;
+    font-weight: 600;
+
+}
+
+.long-description {
+    margin-bottom: 20px;
+    height: 400px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    overflow-y: scroll;
+    scrollbar-color: #d8d8d8 rgba(233, 233, 233, 0.233);
+}
+.description-container {
+    color: #00254b;
+    font-weight: 600;
+    
+
+}
+
+.imageMember{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bottomLinksContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    background-color: #00254b;
+    color: #ffffff;
+    padding: 10px;
+    height: 65px;
+    padding-left: 20px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    
+}
+.bottomContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 37, 75, 0), #ffffff);
+    height: 35px;
+    margin-bottom: 65px;
+    
+}
+
+.linksContainer{
+    display: flex;     
+    gap: 15px;
+    padding-right: 25px;
+    padding-bottom: 8px;
+}
+.linksContainer a{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+}

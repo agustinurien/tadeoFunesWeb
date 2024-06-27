@@ -44,6 +44,7 @@
 .cardContainer{
     width: fit-content;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 .imageTeamContainer{
     width: 280px;

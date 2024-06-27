@@ -28,7 +28,7 @@ const Calendar = () => {
     }, [isInView])
 
     return (
-        <section className="sectionCalendar">
+        <section id="calendar" className="sectionCalendar">
             <motion.div className="separacionContainerCalendar2" >
                 <Image
                     src={separacion3}
@@ -38,16 +38,9 @@ const Calendar = () => {
                     className="separacion"
                 />
             </motion.div>
-            <motion.div className="separacionContainerCalendar" style={{ y: separacionY, width: "100%", position: "absolute", bottom: 0, left: 0 }}>
-                <Image
-                    src={separacion3}
-                    width={2500}
-                    height={1700}
-                    alt="separacion3"
-                    className="separacion"
-                />
-            </motion.div>
-            <div className="calendarTextContainer">
+            <div
+
+                className="calendarTextContainer">
                 <motion.h2
                     variants={{
                         animate: { opacity: 1 },

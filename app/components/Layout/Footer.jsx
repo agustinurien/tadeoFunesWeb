@@ -1,23 +1,46 @@
+"use client"
+
 import '../Layout/layout.css'
 import fondoFooter from '../../../public/assets/fondo.jpg'
 import separacion from '../../../public/assets/separacionFooter.png'
+import separacion2 from '../../../public/assets/separacionFooterAlt.png'
 import Image from 'next/image'
 import FormFooter from './FormFooter'
 import { comfortaa, sora } from '@/app/fonts'
 import { FaFacebook, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter, FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
+import { usePathname } from 'next/navigation'
 const Footer = () => {
+    const pathname = usePathname();
+
+    const pathIsMember = pathname !== "/";
+
     return (
 
         <section className='sectionFooter'>
+
             <div className='footerSeparacion'>
-                <Image
-                    src={separacion}
-                    width={3000}
-                    height={3000}
-                    alt='separacion'
-                    className='separacion'
-                />
+                {
+                    pathIsMember ?
+                        <Image
+                            style={{
+                                marginTop: -10
+                            }}
+                            src={separacion2}
+                            width={3000}
+                            height={3000}
+                            alt='separacion'
+                            className='separacion'
+                        />
+                        :
+                        <Image
+                            src={separacion}
+                            width={3000}
+                            height={3000}
+                            alt='separacion'
+                            className='separacion'
+                        />
+                }
             </div>
 
             <div className='footerTextImage'>

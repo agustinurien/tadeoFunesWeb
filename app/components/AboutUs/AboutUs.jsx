@@ -46,11 +46,14 @@ const AboutUs = () => {
                 className='backSeparacion'
                 style={{ y: separacionY, position: "absolute", top: 0, left: 0, width: "100%", height: "25%" }}></motion.div>
 
-            <div className='topAboutUsContainer'>
+            <div
+                id='about'
+                className='topAboutUsContainer'>
 
                 <div className='aboutUsTextImage'>
                     <div className='aboutUsTextContainer'>
                         <motion.h2
+
                             variants={{
 
                                 animate: { opacity: 1 }

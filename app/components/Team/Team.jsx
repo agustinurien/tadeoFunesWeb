@@ -19,7 +19,9 @@ const Team = () => {
     }, [isInView])
     return (
         <section style={{ backgroundColor: "#003366" }}>
-            <div className="separacionTeam" >
+            <div
+                id='team'
+                className="separacionTeam" >
                 <div className='teamTextContainer'>
                     <motion.h2
                         variants={{

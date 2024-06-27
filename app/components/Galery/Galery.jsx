@@ -22,8 +22,12 @@ const Galery = () => {
 
     }, [isInView])
     return (
-        <section className="galerySection">
-            <div className="effectGallery">
+        <section
+
+            className="galerySection">
+            <div
+
+                className="effectGallery">
 
                 <motion.div
                     variants={{

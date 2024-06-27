@@ -9,8 +9,12 @@ import enard from "../../../public/assets/enard.png"
 
 const Sponsor = () => {
     return (
-        <section className='sponsorSection'>
-            <div className='sponsorsContainer'>
+        <section
+            id='sponsors'
+            className='sponsorSection'>
+            <div
+
+                className='sponsorsContainer'>
                 <div className='logoSponsorContainer'>
                     <Image
                         src={fay}

@@ -153,21 +153,14 @@
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
         z-index: 1;
 }
-.separacionContainerCalendar{
-    margin-bottom: 140px;
-}
+
 
 
 @media screen and (max-width: 1500px){
     .sectionCalendar{
         padding-top: 90px;
-    }
-    .separacionContainerCalendar{
-        display: none;
-        
     }
     .lineaTiempo{
         width: 90%;
@@ -185,10 +178,6 @@
     }
     .calendarTextContainer p{
         width: 80%;
-        
-    }
-    .eventosTop{
-        width: 100%;
         
     }
     .eventosBottom{
@@ -210,11 +199,14 @@
         width: 50%;
     }
     .panamericano{
-        width: 40%;
-        
+        width: 280px;
+        height: 100px;
+        margin-left: 20px;
     }
     .olimpicos{
-        width: 40%;
+        width: 280px;
+        height: 100px;
+        margin-left: 40px;
     }
     .logoOlimpicoContainer{
         display: none;
@@ -224,6 +216,16 @@
     }
     .backgroundEventos{
         height: 60vh;
+    }
+}
+@media screen and (max-width: 930px){
+    .panamericano{
+        width: 190px;
+        margin-left: 20px;
+    }
+    .olimpicos{
+        width: 190px;
+        margin-left: 40px;
     }
 }
 @media screen and (max-width: 560px){
@@ -257,6 +259,7 @@
         
     }
     .panamericano{
+        
         width: 50%;
         
     }

@@ -21,7 +21,8 @@ const GaleryRight = () => {
     }, [isInView])
     return (
         <div className='rightGaleryContainer'>
-            <div className='bottomPicContainer'>
+            <div
+                className='bottomPicContainer'>
                 <motion.div
                     variants={{
                         animate: { scale: [1, 1.03, 1], opacity: 1 },
