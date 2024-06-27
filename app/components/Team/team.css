@@ -145,5 +145,13 @@
         
         
     }
-    
+    .cardContainer{
+        scale: 0.8;
+        margin-bottom: 0px;
+    }
+    .separacionTeam{
+        padding-bottom: 40px;
+        
+        
+    }
 }

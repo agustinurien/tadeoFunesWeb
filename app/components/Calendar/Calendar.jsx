@@ -155,7 +155,34 @@ const Calendar = () => {
 
                     </div>
                 </div>
+                <section className="calendarMobile">
+                    <div className="contenedorEvents">
+                        <div className="cardEvent">
+                            <h3>Mundial Juvenil FX</h3>
+                            <span>fecha</span>
+                        </div>
+                    </div>
+                    <div className="contenedorEvents">
+                        <div className="cardEvent cardEvent2">
+                            <h3>Sudamericano 49er FX</h3>
+                            <span>fecha</span>
+                        </div>
+                    </div>
+                    <div className="contenedorEvents">
+                        <div className="cardEvent cardEvent3">
+                            <h3>Juegos Panamericanos</h3>
+                            <span>fecha</span>
+                        </div>
+                    </div>
+                    <div className="contenedorEvents">
+                        <div className="cardEvent cardEvent4">
+                            <h3>Juegos Olimpicos</h3>
+                            <span>fecha</span>
+                        </div>
+                    </div>
+                </section>
             </section>
+
         </section>
     )
 }

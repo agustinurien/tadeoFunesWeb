@@ -329,7 +329,7 @@ input::placeholder, textarea::placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70px;
+        height: 40px;
         width: 100%;
     }
     
@@ -398,12 +398,12 @@ input::placeholder, textarea::placeholder {
 @media screen and (max-width: 560px) {
     
     .navBar ul{
-        gap: 0.5%;
+        gap: 0%;
         
     }
     .navBar li{
         width: 60px;
-        font-size: 0.55rem;
+        font-size: 0.45rem;
     }
     .contenedorLogo{
         width: 30px;
@@ -423,7 +423,7 @@ input::placeholder, textarea::placeholder {
 
 
     .contenedorForm{
-        width: 67%;
+        width: 80%;
         
     }
     .logosRedes{
