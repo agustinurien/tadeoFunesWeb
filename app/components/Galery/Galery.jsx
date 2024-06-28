@@ -16,7 +16,6 @@ const Galery = () => {
 
     useEffect(() => {
         if (isInView) {
-
             controls.start("animate")
         }
 

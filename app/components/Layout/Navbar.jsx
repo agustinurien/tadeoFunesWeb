@@ -130,7 +130,7 @@ const Navbar = () => {
                         animate={controls}
                         transition={{ duration: 0.4 }}
                     >
-                        <a href="/">Galery</a>
+                        <a href="/galeria">Galery</a>
                     </motion.li>
 
                     <motion.li
