@@ -127,3 +127,42 @@ p {
     align-items: center;
     font-size: 1.7rem;
 }
+
+@media (max-width: 1060px) {
+    
+    
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
+    
+}
+@media (max-width: 560px) {
+    .top-section{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .info {
+        width: 100%;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+    .info p{
+        font-size: 1rem;
+        padding-left: 10px;
+        color: #00254bcb;
+        font-weight: 800;
+    }
+    .card{
+        width: 90%;
+    }
+    .sectionMember{
+        padding-top: 40px;
+    }
+}
