@@ -5,7 +5,7 @@ import GaleryRight from "./GaleryRight"
 import Horizontal3 from "../../../public/assets/galery/fotoH3.jpg"
 import "../Galery/galery.css"
 import { sora } from "@/app/fonts"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useAnimation, useInView, motion } from "framer-motion"
 import Image from "next/image"
 
@@ -16,12 +16,29 @@ const Galery = () => {
 
     const isInView = useInView(ref, { once: true })
 
+    const [windowWidth, setWindowWidth] = useState(false)
+
     useEffect(() => {
         if (isInView) {
             controls.start("animate")
         }
 
     }, [isInView])
+
+    const handleResize = () => {
+        if (window.innerWidth < 768) {
+            setWindowWidth(true)
+        } else {
+            setWindowWidth(false)
+        }
+    };
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <section
@@ -46,18 +63,22 @@ const Galery = () => {
                 </motion.div>
             </div>
             {
+                windowWidth ?
+                    <Image
+                        src={Horizontal3}
+                        width={2200}
+                        height={2200}
+                        quality={100}
+                        priority={true}
+                        className="imagenGaleryMobile"
+                        alt='galeryInicio'
 
-                <Image
-                    src={Horizontal3}
-                    width={2200}
-                    height={2200}
-                    quality={100}
-                    priority={true}
-                    className="imagenGaleryMobile"
-                    alt='galeryInicio'
-
-                />
-
+                    />
+                    :
+                    <>
+                        <GaleryLeft />
+                        <GaleryRight />
+                    </>
             }
 
         </section >
