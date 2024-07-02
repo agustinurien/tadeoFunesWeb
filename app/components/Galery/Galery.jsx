@@ -46,22 +46,18 @@ const Galery = () => {
                 </motion.div>
             </div>
             {
-                window.innerWidth < 768 ?
-                    <Image
-                        src={Horizontal3}
-                        width={2200}
-                        height={2200}
-                        quality={100}
-                        priority={true}
-                        className="imagenGaleryMobile"
-                        alt='galeryInicio'
 
-                    />
-                    :
-                    <>
-                        <GaleryLeft />
-                        <GaleryRight />
-                    </>
+                <Image
+                    src={Horizontal3}
+                    width={2200}
+                    height={2200}
+                    quality={100}
+                    priority={true}
+                    className="imagenGaleryMobile"
+                    alt='galeryInicio'
+
+                />
+
             }
 
         </section >
