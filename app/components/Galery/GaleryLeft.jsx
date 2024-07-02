@@ -38,6 +38,8 @@ const GaleryLeft = () => {
                         src={Horizontal1}
                         width={2200}
                         height={2200}
+                        quality={100}
+                        priority={true}
                         alt='galeryInicio'
                         className='imagenGalery'
                     />
@@ -60,6 +62,8 @@ const GaleryLeft = () => {
                             src={vertical1}
                             width={2200}
                             height={2200}
+                            quality={100}
+                            priority={true}
                             alt='galeryInicio'
                             className='imagenGalery'
                         />
@@ -79,6 +83,8 @@ const GaleryLeft = () => {
                             src={vertical2}
                             width={2200}
                             height={2200}
+                            quality={100}
+                            priority={true}
                             alt='galeryInicio'
                             className='imagenGalery'
                         />

@@ -77,6 +77,8 @@ const CardsContainer = () => {
                             src={jorge}
                             width={1200}
                             height={1200}
+                            quality={100}
+                            priority={true}
                             alt='jorge'
                             className='imagenTeam'
                         />
@@ -104,6 +106,8 @@ const CardsContainer = () => {
                             src={tadeo}
                             width={1200}
                             height={1200}
+                            quality={100}
+                            priority={true}
                             alt='jorge'
                             className='imagenTeam2'
                         />
@@ -131,6 +135,8 @@ const CardsContainer = () => {
                             src={jorge}
                             width={1200}
                             height={1200}
+                            quality={100}
+                            priority={true}
                             alt='jorge'
                             className='imagenTeam3'
                         />
@@ -158,6 +164,8 @@ const CardsContainer = () => {
                             src={jorge}
                             width={1200}
                             height={1200}
+                            quality={100}
+                            priority={true}
                             alt='jorge'
                             className='imagenTeam'
                         />
@@ -185,6 +193,8 @@ const CardsContainer = () => {
                             src={jorge}
                             width={1200}
                             height={1200}
+                            quality={100}
+                            priority={true}
                             alt='jorge'
                             className='imagenTeam2'
                         />
@@ -211,6 +221,8 @@ const CardsContainer = () => {
                             src={jorge}
                             width={1200}
                             height={1200}
+                            quality={100}
+                            priority={true}
                             alt='jorge'
                             className='imagenTeam3'
                         />

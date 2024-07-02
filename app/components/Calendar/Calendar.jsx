@@ -91,6 +91,8 @@ const Calendar = () => {
                                     src={pana}
                                     width={2500}
                                     height={1700}
+                                    quality={100}
+                                    priority={true}
                                     alt="logoPana"
                                     className="logoPana"
                                 />
@@ -113,6 +115,8 @@ const Calendar = () => {
                         src={linea}
                         width={2500}
                         height={1700}
+                        quality={100}
+                        priority={true}
                         alt="lineaTiempo"
                         className="lineaTiempo"
                     />

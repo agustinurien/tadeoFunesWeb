@@ -16,7 +16,6 @@
 }
 .logoSponsorContainer{
     height: 200px;
-    
     width: 190px;
     
 }
@@ -25,24 +24,36 @@
     height: 100%;
     object-fit: contain;
 }
+.logoSponsor:hover{
+    
+    filter: drop-shadow(0px 0px 15px #d6851b8a);
+}
 @media screen and (max-width: 930px){
     .sponsorSection{
         padding-top: 15vh;
         
     }
     .logoSponsorContainer{
-        height: 90px;
+        height: 120px;
         width: 150px;
         
     }
 }
-@media screen and (max-width: 560px){
+@media screen and (max-width: 768px){
+    .sponsorSection{
+        padding-bottom: 50px;
+    }
+    .sponsorsContainer{
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
     .sponsorSection{
         padding-top: 10vh;
         background-color: #ffb56a;
     }
     .logoSponsorContainer{
-        height: 70px;
+        height: 90px;
         width: 120px;
         
     }

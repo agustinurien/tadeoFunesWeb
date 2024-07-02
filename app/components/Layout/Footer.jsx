@@ -68,9 +68,9 @@ const Footer = () => {
                     <div className='redes'>
                         <h3 className={`${sora.className}`}>Redes.</h3>
                         <div className='logosRedes'>
-                            <a href="/"><FaInstagram /></a>
-                            <a href="/"><FaFacebook /></a>
-                            <a href="/"><FaXTwitter /></a>
+                            <a href="https://www.instagram.com/p/C8nQ2RZpQhC/"><FaInstagram /></a>
+                            <a href="https://web.facebook.com/"><FaFacebook /></a>
+                            <a href="https://x.com/"><FaXTwitter /></a>
                         </div>
                     </div>
                 </div>

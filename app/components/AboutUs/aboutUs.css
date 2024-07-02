@@ -148,7 +148,7 @@
 }
 @media screen and (max-width: 560px){
     .aboutUsContainer{
-        padding-bottom: 80px;
+        padding-bottom: 60px;
     }
     .aboutUsTextImage{
         gap: 40px;

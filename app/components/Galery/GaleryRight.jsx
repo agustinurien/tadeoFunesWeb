@@ -37,6 +37,8 @@ const GaleryRight = () => {
                             src={Horizontal3}
                             width={2200}
                             height={2200}
+                            quality={100}
+                            priority={true}
                             alt='galeryInicio'
                             className='imagenGalery'
                         />
@@ -57,6 +59,8 @@ const GaleryRight = () => {
                             src={vertical3}
                             width={2200}
                             height={2200}
+                            quality={100}
+                            priority={true}
                             alt='galeryInicio'
                             className='imagenGalery'
                         />
@@ -77,6 +81,8 @@ const GaleryRight = () => {
                         src={Horizontal2}
                         width={2200}
                         height={2200}
+                        quality={100}
+                        priority={true}
                         alt='galeryInicio'
                         className='imagenGalery'
                     />

@@ -4,13 +4,14 @@ import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import "./galeria.css";
 import fetchImages from '@/app/data';
+import { sora } from '@/app/fonts';
 
 const Page = () => {
     const [imageUrls, setImageUrls] = useState([]);
-    const [visibleCount, setVisibleCount] = useState(20);
+    const [visibleCount, setVisibleCount] = useState(15);
     const [visibleImages, setVisibleImages] = useState([]);
     const [done, setDone] = useState(false);
-
+    const [numberOfColumns, setNumberOfColumns] = useState(3);
     useEffect(() => {
         const getData = async () => {
             const urls = await fetchImages();
@@ -25,11 +26,24 @@ const Page = () => {
     }, [visibleCount]);
 
     const loadMoreImages = () => {
-        setVisibleCount(prevCount => prevCount + 20);
+        setVisibleCount(prevCount => prevCount + 15);
     };
 
+    const handleResize = () => {
+        if (window.innerWidth < 768) {
+            setNumberOfColumns(2);
+        } else {
+            setNumberOfColumns(3);
+        }
+    };
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
-    const numberOfColumns = 4;
     const columns = Array.from({ length: numberOfColumns }, () => []);
 
     visibleImages.forEach((url, index) => {
@@ -51,8 +65,8 @@ const Page = () => {
                                     alt={`Image ${imgIndex}`}
                                     width={5000}
                                     height={5000}
+                                    loading='lazy'
                                     className="imageGaleria"
-                                    loading="lazy"
                                     onLoad={(e) => {
                                         e.target.classList.add('loaded');
                                     }}
@@ -65,7 +79,7 @@ const Page = () => {
             {
                 !done &&
                 <div className='loadMoreContainer'>
-                    <button className='loadMoreButton' onClick={loadMoreImages}>Cargar más</button>
+                    <button className={`${sora.className} loadMoreButton`} onClick={loadMoreImages}>Cargar más</button>
                 </div>
             }
         </>

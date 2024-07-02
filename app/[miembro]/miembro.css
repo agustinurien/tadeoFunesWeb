@@ -127,6 +127,9 @@ p {
     align-items: center;
     font-size: 1.7rem;
 }
+.linksContainer a:hover{
+    scale: 1.1;
+}
 
 @media (max-width: 1060px) {
     

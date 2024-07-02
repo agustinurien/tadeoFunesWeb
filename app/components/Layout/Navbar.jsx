@@ -145,6 +145,7 @@ const Navbar = () => {
                     </motion.li>
 
                     <motion.li
+                        className="market"
                         variants={{
                             animate: { opacity: 1, x: 0 }
                         }}
@@ -152,7 +153,7 @@ const Navbar = () => {
                         animate={controls}
                         transition={{ duration: 0.4, delay: 0.2 }}
                     >
-                        <a href="">Market</a>
+                        <a className="market" href="">Market</a>
                     </motion.li>
                 </ul>
             </div>

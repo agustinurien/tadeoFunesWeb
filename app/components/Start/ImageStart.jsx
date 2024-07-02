@@ -21,8 +21,9 @@ const ImageStart = () => {
                 className="imageStartContainer">
                 < Image
                     src={fondo}
-                    width={2500}
-                    height={1700}
+                    fill
+                    quality={100}
+                    sizes="100vw"
                     alt="fondoHome"
                     className="fondoHome"
                     priority={true}
@@ -35,6 +36,7 @@ const ImageStart = () => {
                     src={separacion}
                     width={2500}
                     height={1700}
+                    priority={true}
                     alt="separacion"
                     className="separacion"
                 />

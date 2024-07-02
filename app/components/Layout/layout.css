@@ -49,6 +49,11 @@
     color: rgb(255, 255, 255);
     font-weight: 300;
 }
+.navBar li:hover{
+    scale: 1.1;
+    text-shadow: 0px 0px 5px #ffffff63;
+    
+}
 
 .contenedorLogo{
     display: flex;
@@ -155,6 +160,10 @@
 .logosRedes a{
     font-size: 1.3rem;
 }
+.logosRedes a:hover{
+    scale: 1.1;
+    color: white;
+}
 
 
 .formSection{
@@ -253,6 +262,12 @@ input::placeholder, textarea::placeholder {
     
 }
 
+    .market{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+
 @media screen and (max-width: 1500px) {
     .navBar{
         height: 90px;
@@ -329,7 +344,7 @@ input::placeholder, textarea::placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 60px;
         width: 100%;
     }
     
@@ -396,7 +411,9 @@ input::placeholder, textarea::placeholder {
     }
 }
 @media screen and (max-width: 560px) {
-    
+    .navBar{
+        height: 50px;
+    }
     .navBar ul{
         gap: 0%;
         

@@ -80,12 +80,17 @@ const Card = ({ params }) => {
                         </div>
                         <div className="top-section">
                             <div className="imageMemberContainer">
-                                <Image
-                                    width={1000}
-                                    height={1000}
-                                    src={member.imgurl}
-                                    alt={member.name}
-                                    className="imageMember" />
+                                {
+                                    member.imgurl &&
+                                    <Image
+                                        width={1000}
+                                        height={1000}
+                                        quality={100}
+                                        priority={true}
+                                        src={member.imgurl}
+                                        alt="miembro"
+                                        className="imageMember" />
+                                }
                             </div>
                             <div className="info">
                                 <h2 className={`${sora.className}`}>{member.name}</h2>

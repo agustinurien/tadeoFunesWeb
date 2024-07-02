@@ -37,9 +37,10 @@ const AboutUs = () => {
                     src={separacion2}
                     width={2500}
                     height={1700}
+                    quality={100}
+                    priority={true}
                     alt="separacion2"
                     className="separacion"
-                    priority={true}
                 />
             </motion.div>
             <motion.div
@@ -118,6 +119,7 @@ const AboutUs = () => {
                             src={diagonal}
                             width={2500}
                             height={2700}
+                            priority={true}
                             alt="fotoDiagonal"
                             className="fotoAboutUs"
                         />
@@ -166,6 +168,8 @@ const AboutUs = () => {
                             src={barco}
                             width={2500}
                             height={2700}
+                            quality={100}
+                            priority={true}
                             alt="fotoBarco"
                             className="fotoAboutUs"
                         />
@@ -223,6 +227,8 @@ const AboutUs = () => {
                             src={agua}
                             width={2500}
                             height={2700}
+                            quality={100}
+                            priority={true}
                             alt="agua"
                             className="fotoAboutUs"
                         />

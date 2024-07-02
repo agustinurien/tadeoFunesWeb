@@ -15,59 +15,73 @@ const Sponsor = () => {
             <div
 
                 className='sponsorsContainer'>
-                <div className='logoSponsorContainer'>
-                    <Image
-                        src={fay}
-                        width={1000}
-                        height={1000}
-                        alt='logoSponsor'
-                        className='logoSponsor'
+                <a href="https://fay.org/">
 
-                    />
-                </div>
-                <div className='logoSponsorContainer'>
-                    <Image
-                        style={{ padding: 15 }}
-                        src={zik}
-                        width={1000}
-                        height={1000}
-                        alt='logoSponsor'
-                        className='logoSponsor'
+                    <div className='logoSponsorContainer'>
+                        <Image
+                            src={fay}
+                            width={1000}
+                            height={1000}
+                            alt='logoSponsor'
+                            className='logoSponsor'
 
-                    />
-                </div>
-                <div className='logoSponsorContainer'>
-                    <Image
-                        style={{ padding: 15 }}
-                        src={enard}
-                        width={1000}
-                        height={1000}
-                        alt='logoSponsor'
-                        className='logoSponsor'
+                        />
+                    </div>
+                </a>
+                <a href="https://es.zhik.com/">
+                    <div className='logoSponsorContainer'>
+                        <Image
+                            style={{ padding: 21 }}
+                            src={zik}
+                            width={1000}
+                            height={1000}
+                            alt='logoSponsor'
+                            className='logoSponsor'
 
-                    />
-                </div>
-                <div className='logoSponsorContainer'>
-                    <Image
-                        src={deporte}
-                        width={1000}
-                        height={1000}
-                        alt='logoSponsor'
-                        className='logoSponsor'
+                        />
+                    </div>
+                </a>
+                <a href="https://infoenard.org.ar/">
 
-                    />
-                </div>
-                <div className='logoSponsorContainer'>
-                    <Image
-                        style={{ padding: 16 }}
-                        src={yca}
-                        width={1000}
-                        height={1000}
-                        alt='logoSponsor'
-                        className='logoSponsor'
+                    <div className='logoSponsorContainer'>
+                        <Image
+                            style={{ padding: 19 }}
+                            src={enard}
+                            width={1000}
+                            height={1000}
+                            alt='logoSponsor'
+                            className='logoSponsor'
 
-                    />
-                </div>
+                        />
+                    </div>
+                </a>
+                <a href="https://www.argentina.gob.ar/interior/deportes">
+
+                    <div className='logoSponsorContainer'>
+                        <Image
+                            src={deporte}
+                            width={1000}
+                            height={1000}
+                            alt='logoSponsor'
+                            className='logoSponsor'
+
+                        />
+                    </div>
+                </a>
+                <a href="https://yca.org.ar/">
+
+                    <div className='logoSponsorContainer'>
+                        <Image
+                            style={{ padding: 25 }}
+                            src={yca}
+                            width={1000}
+                            height={1000}
+                            alt='logoSponsor'
+                            className='logoSponsor'
+
+                        />
+                    </div>
+                </a>
             </div>
         </section>
     )
