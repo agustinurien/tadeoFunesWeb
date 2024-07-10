@@ -8,7 +8,7 @@ import { sora } from "@/app/fonts"
 import { useEffect, useRef, useState } from "react"
 import { useAnimation, useInView, motion } from "framer-motion"
 import Image from "next/image"
-
+import separacion from "../../../public/assets/separacionFooter2.png"
 
 const Galery = () => {
     const ref = useRef()
@@ -45,7 +45,6 @@ const Galery = () => {
 
             className="galerySection">
             <div
-
                 className="effectGallery">
 
                 <motion.div
@@ -64,22 +63,30 @@ const Galery = () => {
             </div>
             {
                 windowWidth ?
-                    <Image
-                        src={Horizontal3}
-                        width={2200}
-                        height={2200}
-                        quality={100}
-                        priority={true}
-                        className="imagenGaleryMobile"
-                        alt='galeryInicio'
+                    <>
 
-                    />
+                        <div className="imagenMobileContainer">
+
+                            <Image
+                                src={Horizontal3}
+                                width={2200}
+                                height={2200}
+                                quality={100}
+                                priority={true}
+                                className="imagenGaleryMobile"
+                                alt='galeryInicio'
+
+                            />
+                        </div>
+                    </>
                     :
                     <>
                         <GaleryLeft />
                         <GaleryRight />
                     </>
+
             }
+
 
         </section >
     )

@@ -30,7 +30,7 @@ const Team = () => {
                         initial={{ opacity: 0, y: 100 }}
                         animate={controls}
                         transition={{ duration: 0.4, delay: 0.1 }}
-                        className={`${sora.className}`}>TEAM</motion.h2>
+                        className={`${sora.className}`}>EQUIPO</motion.h2>
                     <motion.p
                         ref={ref}
                         variants={{

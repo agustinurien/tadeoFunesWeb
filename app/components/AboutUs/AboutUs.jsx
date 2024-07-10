@@ -62,7 +62,7 @@ const AboutUs = () => {
                             initial={{ opacity: 0 }}
                             animate={controls}
                             transition={{ duration: 0.4 }}
-                            className={`${sora.className}`}>ABOUT US</motion.h2>
+                            className={`${sora.className}`}>SOBRE NOSOTROS</motion.h2>
                         <motion.p
                             variants={{
                                 animate: { opacity: 1 }
@@ -107,7 +107,7 @@ const AboutUs = () => {
                             right: 0,
                             height: "55%",
                             width: "100%",
-                            backgroundColor: "#003366",
+                            backgroundColor: "#0549aa",
                             zIndex: 998
                         }}>
 
@@ -135,7 +135,7 @@ const AboutUs = () => {
                         right: 0,
                         height: "95%",
                         width: "96%",
-                        backgroundColor: "#396CAA",
+                        backgroundColor: "#aff4f7",
                         zIndex: 1
                     }}></div>
                     <motion.div
@@ -150,7 +150,7 @@ const AboutUs = () => {
                             right: 0,
                             height: "100%",
                             width: "100%",
-                            backgroundColor: "#003366",
+                            backgroundColor: "#0549aa",
                             zIndex: 3
                         }}></motion.div>
 
@@ -185,7 +185,7 @@ const AboutUs = () => {
                     style={{
                         position: 'relative',
                         height: "100%",
-                        width: "74%"
+                        width: "80%"
                     }}>
                     <div style={{
                         position: 'absolute',
@@ -207,7 +207,7 @@ const AboutUs = () => {
                             right: 0,
                             height: "100%",
                             width: "100%",
-                            backgroundColor: "#003366",
+                            backgroundColor: "#0549aa",
                             zIndex: 998
                         }}>
 

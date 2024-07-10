@@ -1,0 +1,204 @@
+.equipamientoSection{
+    position: relative;
+    background-color: #0549aa;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.equipamientoSection h2{
+    color: aliceblue;
+    font-size: 2.3rem;
+    letter-spacing: 5px;
+    margin-left: 13%;
+    padding-top: 50px;
+}
+.contenedorSeparacion{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.equipamiento{
+    background-color:  #0549aa;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90vh;
+}
+.dataEquipamiento{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    padding-left: 13%;
+    margin-top: 30px;
+    
+}
+.categoria{
+    z-index: 997;
+}
+.categoria h3{
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-bottom: 3px;
+}
+.categoriaSpan {
+    display: flex;
+    flex-wrap: wrap;
+    
+    color: white;
+}
+.categoriaSpan span{
+    width: fit-content;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: rgba(240, 248, 255, 0.938);
+    
+    border: 1px solid rgba(255, 255, 255, 0.664);
+    background-color: rgba(255, 255, 255, 0.089);
+    padding: 5px 10px;
+}
+.categoria p{
+    width: 100%;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 20px;
+}
+.embarcacion{
+    z-index: 997;
+}
+.embarcacion h3{
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-bottom: 2px;
+
+}
+.embarcacion span{
+    color: #ffffffbd;
+    font-size: 1.1rem;
+    
+}
+.embarcacion ul li{
+    list-style: none;
+    padding: 5px 10px;
+    color: rgba(240, 248, 255, 0.658);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.664);
+    background-color: rgba(255, 255, 255, 0.089);
+    color: #ffffff;
+    width: fit-content;
+}
+.embarcacion ul li strong{
+    font-weight: 800;
+    padding-right: 5px;
+}
+.embarcacion ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    padding-top: 20px;
+    
+}
+.contenedorImageEquip{
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+}
+.imageEquip{
+    object-fit: cover;
+    height: 100%;
+}
+
+@media screen and (max-width: 1500px){
+    .equipamiento{
+        height: 100vh;
+    }
+    .embarcacion ul {
+        width: 120%;
+        
+    }
+    .categoriaSpan {
+        width: 120%;
+    }
+}
+@media screen and (max-width: 1060px){
+    .equipamientoSection h2{
+        text-align: center;
+        margin-left: 0px;
+        font-size: 1.7rem;
+    }
+    .contenedorImageEquip{
+        display: none;
+    }
+    .dataEquipamiento{
+        width: 80%;
+        padding-left: 0;
+        
+    }
+    .equipamiento{
+        display: flex;
+        justify-content: center;
+        height: 75vh;
+    }
+    .categoria{
+        text-align: center;
+    }
+    .categoria h3{
+        font-size: 1.2rem;
+    }
+    .categoriaSpan{
+        width: 100%;
+        justify-content: center;
+    }
+    .embarcacion{
+        text-align: center;
+    }
+    .embarcacion h3{
+        font-size: 1.2rem;
+    }
+    .embarcacion span{
+        font-size: 1rem;
+    }
+    .embarcacion ul {
+        width: 100%;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width: 760px){
+    .equipamiento{
+        display: flex;
+        justify-content: center;
+        height: 105vh;
+
+    }
+    .categoria h3{
+        padding-top: 0px;
+    }
+    .categoriaSpan{
+        width: 100%;
+        justify-content: center;
+    }
+    .categoriaSpan span{
+        width: 100%;
+        justify-content: center;
+    }
+    .embarcacion ul {
+        width: 100%;
+        justify-content: center;
+    }
+    .embarcacion ul li{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

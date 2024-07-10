@@ -58,12 +58,12 @@ const Footer = () => {
                 <div className='socials'>
                     <div className='donaciones'>
                         <h3 className={`${sora.className}`}>Donaciones.</h3>
-                        <span className={`${comfortaa.className}`}>agus.urien2@gmail.com</span>
+                        <a className={`${comfortaa.className} donacionesBoton`} href="/">Apoyanos</a>
                     </div>
                     <div className='contacto'>
                         <h3 className={`${sora.className}`}>Contacto.</h3>
-                        <span className={`${comfortaa.className}`}>agus.urien2@gmail.com</span>
-                        <span className={`${comfortaa.className}`}>11 4149-1827</span>
+                        <span className={`${comfortaa.className}`}>Tade.funess@gmail.com</span>
+                        <span className={`${comfortaa.className}`}>+ 54 9 11 3208 6274</span>
                     </div>
                     <div className='redes'>
                         <h3 className={`${sora.className}`}>Redes.</h3>
@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
             <FormFooter />
 
-        </section>
+        </section >
 
     )
 }

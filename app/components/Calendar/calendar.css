@@ -7,7 +7,7 @@
 
 }
 .calendarTextContainer{
-    background-color: #E2EEFC;
+    background-color: #aff3f7bd;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -16,8 +16,30 @@
     padding: 20px;
     padding-bottom: 40px;
 }
+
+
+.button{
+    margin-top: 20px;
+    z-index: 997;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 35px;
+    border: 2px solid #0549aa;
+    color: #0549aa;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.button:hover{
+    
+    border: 2px solid #0549aa;
+    background-color: #0549aa;
+    color: #ffffff;
+}
 .calendarTextContainer h2{
-    color: #003366;
+    
+    color: #0549aa;
     font-size: 2.3rem;
     letter-spacing: 5px;
     padding-top: 20px;
@@ -26,7 +48,7 @@
 }
 .calendarTextContainer p{
     padding-top: 5px;
-    color: rgba(0, 59, 110, 0.678);
+    color: #0753bdc5;
     font-size: 0.8rem;
     font-weight: 800;
     line-height: 20px;
@@ -35,117 +57,12 @@
     z-index: 997;
 }
 .backgroundEventos{
-    background: linear-gradient(to bottom, #E2EEFC,90%,  rgba(255, 255, 255, 0)100%);
-    height: 80vh;
     display: flex;
-    flex-direction: column;
+    background: linear-gradient(#aff3f7bd, #0753bd00);
+    height: 70vh;
     justify-content: center;
 }
-.eventosTopConainer{
-    
-    padding: 20px;
-}
-.eventosTop{
-    width: 80%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
 
-}
-.juvenil{
-    background-color: #85BEF4;
-    height: 120px;
-    width: 240px;
-    border-radius: 5px;
-    padding: 10px;
-    color: #003366;
-    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.233);
-}
-.panamericano{
-    background-color: #286CC0;
-    width: 280px;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);
-}
-.logoPanaContainer{
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-.logoPana{
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-.eventosBottomConainer{
-    
-    padding: 20px;
-    display: flex;
-    justify-content: flex-end;
-}
-.eventosBottom{
-    
-    width: 90%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-
-}
-
-.sudamericano{
-    background-color: #449CEC;
-    height: 120px;
-    width: 240px;
-    border-radius: 5px;
-    padding: 10px;
-    color: #003366;
-    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);
-}
-.olimpicos{
-    background-color: #003366;
-    height: fit-content;
-    width: 270px;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
-    box-shadow: 0px 4px 10px rgb(82, 82, 82);
-}
-.logoOlimpicoContainer{
-    height: 180px;
-    display: flex;
-    align-items: flex-end;
-}
-.logoOlimpico{
-    border-radius: 5px;
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
-}
-
-
-.lineaTiempoContainer{
-    position: relative;
-    height: 110px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    margin: 20px 0px;
-}
-.lineaTiempo{
-    height: auto;
-    width: 100%;
-    object-fit: contain;
-}
 
 .separacionContainerCalendar2{
         margin-bottom: 100px;
@@ -155,18 +72,37 @@
         left: 0;
         z-index: 1;
 }
+.futureEvents{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    width: 80%;
+    height: 100%;
+    gap: 25px;
+}
+.futureEvents div{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);   
+    width: 22%;
+    height: 60%;
+}
 
-.contenedorEvents{
-    display: none;
+.separacionContainerCalendar3{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
 }
 
 
 @media screen and (max-width: 1500px){
     .sectionCalendar{
         padding-top: 90px;
-    }
-    .lineaTiempo{
-        width: 90%;
     }
     .separacionContainerCalendar2{
         display: flex;
@@ -183,71 +119,15 @@
         width: 80%;
         
     }
-    .eventosBottom{
-        width: 100%;
-        
-    }
-    .juvenil{
-        width: fit-content;
-        height: fit-content;
-    }
-    .juvenil h3{
-        width: 50%;
-    }
-    .sudamericano{
-        width: fit-content;
-        height: fit-content;
-    }
-    .sudamericano h3{
-        width: 50%;
-    }
-    .panamericano{
-        width: 280px;
-        height: 100px;
-        margin-left: 20px;
-    }
-    .olimpicos{
-        width: 280px;
-        height: 100px;
-        margin-left: 40px;
-    }
-    .logoOlimpicoContainer{
-        display: none;
-    }
-    .logoPanaContainer{
-        display: none;
-    }
+    
     .backgroundEventos{
         height: 60vh;
     }
 }
 @media screen and (max-width: 930px){
-    .panamericano{
-        width: 190px;
-        margin-left: 20px;
-    }
-    .olimpicos{
-        width: 190px;
-        margin-left: 40px;
-    }
     
 }
 @media screen and (max-width: 560px){
-    .backgroundEventos{
-        height: fit-content;
-    }
-    .eventosTopConainer{
-        display: none;
-    }
-    .eventosBottomConainer{
-        display: none;
-    }
-    .eventosTopConainer{
-        padding-bottom: 0px;
-    }
-    .eventosBottomConainer{
-        padding-top: 0px;
-    }
     .sectionCalendar{
         padding-top: 40px;
     }
@@ -263,60 +143,6 @@
         font-size: 0.7rem;
         line-height: 17px;
         
-    }
-    
-    .calendarMobile{
-        display: none;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-    .contenedorEvents{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 90%;
-    }
-    .cardEvent{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 10px;    
-        margin: 10px 0px;
-        background-color: #E2EEFC;
-        border-radius: 5px;
-        box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);
-    
-    }
-    .cardEvent{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 10px;    
-        margin: 10px 0px;
-        background-color: #97ccfd;
-        border-radius: 5px;
-        box-shadow: 0px 2px 10px rgba(82, 82, 82, 0.274);
-        color: #003366;
-    }
-    .cardEvent2{
-        background-color: #449CEC;
-        
-    }
-    .cardEvent3{
-        
-        background-color: #2268A9;
-        color: white;
-    }
-    .cardEvent4{
-        background-color: #003366;
-        color: white;
     }
     
 }

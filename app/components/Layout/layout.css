@@ -11,8 +11,8 @@
     transition: 0.3s ease-in-out;
 }
 .scrolled{
-    background-color: #003366e0;
-    box-shadow: 0px 0px 5px #001a35a8;
+    background-color: #054aaae7;
+    box-shadow: 0px 0px 5px #001a3533;
     
 }
 
@@ -36,7 +36,7 @@
 .navBar ul{
     display: flex;
     justify-content: center;
-    gap: 45px;
+    gap: 80px;
     list-style: none;
     height: 100%;
 }
@@ -48,6 +48,8 @@
     height: 100%;
     color: rgb(255, 255, 255);
     font-weight: 300;
+    font-size: 1rem;
+    
 }
 .navBar li:hover{
     scale: 1.1;
@@ -62,15 +64,15 @@
 .logo{
     
     height: auto;
-    width: 70%;
+    width: 65%;
 }
 
 
 .sectionFooter{
     display: flex;
     justify-content: space-between;
-    background-color: #001325;
-    background: linear-gradient(to bottom, #011c35, 97%, #011529);
+    background-color: #0549aa;
+    background: linear-gradient(to bottom, #064399, 97%, #042758);
     position: relative;
 }
 .footerSeparacion{
@@ -95,7 +97,7 @@
     object-position: top;
 }
 .effectFondoFooter{
-    background: linear-gradient(to right,#00132507, 40%,  #011c35);
+    background: linear-gradient(to right,#054aaa04, 40%,  #064399);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -203,12 +205,12 @@
     background-color:  #0053a10e;
     padding-left: 10px;
     border-radius: 5px;
-    color: #003366;
+    color: #0549aa;
     font-size: 0.8rem;
 }
 .fill input:focus{
     outline: none;
-    border: 1px solid #003366;
+    border: 1px solid #0549aa;
 }
 
 .fill textarea{
@@ -220,11 +222,11 @@
     padding-top: 10px;
     border-radius: 5px;
     resize: none;
-    color: #003366;
+    color: #0549aa;
 }
 .fill textarea:focus{
     outline: none;
-    border: 1px solid #003366;
+    border: 1px solid #0549aa;
 }
 input::placeholder, textarea::placeholder {
     color:  #01213f;
@@ -235,7 +237,7 @@ input::placeholder, textarea::placeholder {
 }
 .comunicate{
     font-size: 1.3rem;
-    color: #003366;
+    color: #064091;
 }
 .botonEnviarContainer{
     width: 100%;
@@ -245,11 +247,11 @@ input::placeholder, textarea::placeholder {
 }
 .botonEnviar{
     border: 0px;
-    color: #003366;
+    color: #0549aa;
     width: 100%;
     height: 50px;
     background-color: #ffffff05;
-    border: 1px solid #003366;
+    border: 1px solid #0549aa;
     font-weight: 300;
     font-size: 1rem;
     border-radius: 5px;
@@ -257,7 +259,7 @@ input::placeholder, textarea::placeholder {
 }
 .botonEnviar:hover{
     color: white;
-    background-color: #0a3968;
+    background-color: #0549aa;
     font-weight: 300;
     
 }
@@ -267,6 +269,14 @@ input::placeholder, textarea::placeholder {
         opacity: 0.5;
     }
 
+    .donacionesBoton{
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.747);
+    }
+    .donacionesBoton:hover{
+        color: white;
+
+    }
 
 @media screen and (max-width: 1500px) {
     .navBar{
@@ -412,7 +422,7 @@ input::placeholder, textarea::placeholder {
 }
 @media screen and (max-width: 560px) {
     .navBar{
-        height: 50px;
+        height: 60px;
     }
     .navBar ul{
         gap: 0%;

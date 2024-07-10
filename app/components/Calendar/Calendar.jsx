@@ -2,17 +2,12 @@
 import Image from "next/image"
 import "../Calendar/calendar.css"
 import separacion3 from "../../../public/assets/separacion3.png"
-import olimpico from "../../../public/assets/olimpicos.webp"
-import pana from "../../../public/assets/pana.png"
-import linea from "../../../public/assets/lineaTiempo.png"
+import separacion4 from "../../../public/assets/separacionEquipamiento.png"
 import { comfortaa, sora } from "@/app/fonts"
-import { useScroll, useTransform, motion, useInView, useAnimation } from "framer-motion"
+import { motion, useInView, useAnimation } from "framer-motion"
 import { useEffect, useRef } from "react"
 
 const Calendar = () => {
-    const { scrollYProgress } = useScroll();
-    const separacionY = useTransform(scrollYProgress, [0, 1], [0, -1600]);
-
 
     const ref = useRef()
     const controls = useAnimation();
@@ -38,6 +33,15 @@ const Calendar = () => {
                     className="separacion"
                 />
             </motion.div>
+            <div className="separacionContainerCalendar3" >
+                <Image
+                    src={separacion4}
+                    width={2500}
+                    height={1700}
+                    alt="separacion3"
+                    className="separacion"
+                />
+            </div>
             <div
 
                 className="calendarTextContainer">
@@ -49,7 +53,7 @@ const Calendar = () => {
                     initial="initial"
                     animate={controls}
                     transition={{ duration: 0.4, delay: 0.2 }}
-                    className={`${sora.className}`}>CALENDAR</motion.h2>
+                    className={`${sora.className}`}>CALENDARIO</motion.h2>
                 <motion.p
                     variants={{
                         animate: { opacity: 1 },
@@ -58,133 +62,25 @@ const Calendar = () => {
                     initial="initial"
                     animate={controls}
                     transition={{ duration: 0.4 }}
-                    className={`${comfortaa.className}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quis. Laudantium natus repellat iste consectetur, quos exercitationem odio doloribus recusandae praesentium, veniam vero provident delectus ea facere velit, voluptas est.</motion.p>
+                    className={`${comfortaa.className}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quis. Laudantium natus repellat iste consectetur,
+                    quos exercitationem odio doloribus recusandae praesentium, veniam vero provident delectus ea facere velit, voluptas est.</motion.p>
+                <a className={`${sora.className} button`} href="/calendario">ver màs</a>
             </div>
-            <section className={`${sora.className} backgroundEventos`}>
-                <div className="eventosTopConainer">
-                    <div className="eventosTop">
+            <section ref={ref} className={`${sora.className} backgroundEventos`}>
+                <div className="futureEvents">
+                    <div>
 
-                        <motion.div
-                            variants={{
-                                animate: { opacity: 1, scale: [1, 1.1, 1] },
-                            }}
-                            initial={{ opacity: 0 }}
-                            animate={controls}
-                            transition={{ duration: 0.2, delay: 0.4, ease: "easeInOut" }}
-                            className="juvenil">
-                            <h3>Mundial Juvenil FX</h3>
-                            <span>fecha</span>
-                        </motion.div>
+                    </div>
+                    <div>
 
-                        <motion.div
-                            variants={{
-                                animate: { opacity: 1, scale: [1, 1.1, 1] },
-                            }}
-                            initial={{ opacity: 0 }}
-                            animate={controls}
-                            transition={{ duration: 0.2, delay: 1.8, ease: "easeInOut" }}
-                            className="panamericano">
-                            <h3>Juegos Panamericanos</h3>
-                            <span >fecha</span>
-                            <div className="logoPanaContainer">
-                                <Image
-                                    src={pana}
-                                    width={2500}
-                                    height={1700}
-                                    quality={100}
-                                    priority={true}
-                                    alt="logoPana"
-                                    className="logoPana"
-                                />
-                            </div>
-                        </motion.div>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
 
                     </div>
                 </div>
-                <div ref={ref} className="lineaTiempoContainer">
-                    <motion.div
-                        variants={{
-                            animate: { width: 0 },
-                        }}
-                        animate={controls}
-                        transition={{ duration: 4.6, delay: 0.1 }}
-                        style={{ backgroundColor: "#E2EEFC", position: "absolute", top: 0, right: 0, width: "100%", height: "80%" }}>
-
-                    </motion.div>
-                    <Image
-                        src={linea}
-                        width={2500}
-                        height={1700}
-                        quality={100}
-                        priority={true}
-                        alt="lineaTiempo"
-                        className="lineaTiempo"
-                    />
-                </div>
-                <div className="eventosBottomConainer">
-                    <div className="eventosBottom">
-
-                        <motion.div
-                            variants={{
-                                animate: { opacity: 1, scale: [1, 1.1, 1] },
-                            }}
-                            initial={{ opacity: 0 }}
-                            animate={controls}
-                            transition={{ duration: 0.2, delay: 0.7, ease: "easeInOut" }}
-                            className="sudamericano">
-                            <h3>Sudamericano 49er Fx</h3>
-                            <span>fecha</span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={{
-                                animate: { opacity: 1, scale: [1, 1.1, 1] },
-                            }}
-                            initial={{ opacity: 0 }}
-                            animate={controls}
-                            transition={{ duration: 0.2, delay: 2.8, ease: "easeInOut" }}
-                            className="olimpicos">
-                            <h3>Juegos Olimpicos</h3>
-                            <span>fecha</span>
-                            <div className="logoOlimpicoContainer">
-                                <Image
-                                    src={olimpico}
-                                    width={2500}
-                                    height={1700}
-                                    alt="logoOlimpico"
-                                    className="logoOlimpico"
-                                />
-                            </div>
-                        </motion.div>
-
-                    </div>
-                </div>
-                <section className="calendarMobile">
-                    <div className="contenedorEvents">
-                        <div className="cardEvent">
-                            <h3>Mundial Juvenil FX</h3>
-                            <span>fecha</span>
-                        </div>
-                    </div>
-                    <div className="contenedorEvents">
-                        <div className="cardEvent cardEvent2">
-                            <h3>Sudamericano 49er FX</h3>
-                            <span>fecha</span>
-                        </div>
-                    </div>
-                    <div className="contenedorEvents">
-                        <div className="cardEvent cardEvent3">
-                            <h3>Juegos Panamericanos</h3>
-                            <span>fecha</span>
-                        </div>
-                    </div>
-                    <div className="contenedorEvents">
-                        <div className="cardEvent cardEvent4">
-                            <h3>Juegos Olimpicos</h3>
-                            <span>fecha</span>
-                        </div>
-                    </div>
-                </section>
             </section>
 
         </section>

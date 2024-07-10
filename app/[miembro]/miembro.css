@@ -13,11 +13,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     height: fit-content;
     box-shadow: 0 2px 15px #00254b57;;
     border-radius: 10px;
-    color: #00254b;
+    color: #0549aa;
 }
 
 .top-section {
@@ -47,8 +47,7 @@
 }
 .info p{
     font-size: 1.3rem;
-    padding-left: 10px;
-    color: #00254bcb;
+    color: #054aaab0;
     font-weight: 800;
 }
 
@@ -59,7 +58,7 @@ h2 {
 
 p {
     font-size: 1rem;
-    color: #00254b;
+    color: #054aaad5;
     font-weight: 600;
 
 }
@@ -75,7 +74,7 @@ p {
     scrollbar-color: #d8d8d8 rgba(233, 233, 233, 0.233);
 }
 .description-container {
-    color: #00254b;
+    color: #0549aa;
     font-weight: 600;
     
 
@@ -96,7 +95,7 @@ p {
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    background-color: #00254b;
+    background-color: #0549aa;
     color: #ffffff;
     padding: 10px;
     height: 65px;

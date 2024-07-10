@@ -12,13 +12,13 @@
     align-items: center;
 }
 .teamTextContainer h2{
-    color: #003366;
+    color: #0549aa;
     font-size: 1.8rem;
     letter-spacing: 5px;
 }
 .teamTextContainer p{
     padding-top: 5px;
-    color: rgba(0, 59, 110, 0.726);
+    color: rgba(2, 78, 145, 0.589);
     font-size: 0.6rem;
     font-weight: 800;
     line-height: 20px;
@@ -60,7 +60,7 @@
     left: 0;
     width: 95%;
     height: 95%;
-    background-color: #003366;
+    background-color: #0549aa;
     border-bottom-left-radius: 30%;
     border-top-right-radius: 20%;
     
@@ -71,7 +71,7 @@
     left: 0;
     width: 95%;
     height: 95%;
-    background-color: #003366;
+    background-color: #0549aa;
     border-radius: 10%;
     border-bottom-left-radius: 0px;
     
@@ -113,7 +113,7 @@
 }
 .teamName h4{
     font-size: 1.2rem;
-    color: #003366;
+    color: #0549aa;
     
     
 }

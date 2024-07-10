@@ -6,15 +6,17 @@ import zik from "../../../public/assets/zik.png"
 import yca from "../../../public/assets/yca3.png"
 import deporte from "../../../public/assets/deporte.png"
 import enard from "../../../public/assets/enard.png"
+import austral from "../../../public/assets/austral.png"
+
 
 const Sponsor = () => {
     return (
+
         <section
             id='sponsors'
             className='sponsorSection'>
-            <div
 
-                className='sponsorsContainer'>
+            <div className='sponsorsContainer'>
                 <a href="https://fay.org/">
 
                     <div className='logoSponsorContainer'>
@@ -73,6 +75,20 @@ const Sponsor = () => {
                     <div className='logoSponsorContainer'>
                         <Image
                             style={{ padding: 25 }}
+                            src={austral}
+                            width={1000}
+                            height={1000}
+                            alt='logoSponsor'
+                            className='logoSponsor'
+
+                        />
+                    </div>
+                </a>
+                <a href="https://yca.org.ar/">
+
+                    <div className='logoSponsorContainer'>
+                        <Image
+                            style={{ padding: 25 }}
                             src={yca}
                             width={1000}
                             height={1000}
@@ -82,7 +98,10 @@ const Sponsor = () => {
                         />
                     </div>
                 </a>
+
             </div>
+
+
         </section>
     )
 }

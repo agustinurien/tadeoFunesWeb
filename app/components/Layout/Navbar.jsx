@@ -43,18 +43,6 @@ const Navbar = () => {
         }
     }, []);
 
-    const scrollTo = (event, value) => {
-        const pathIsMember = pathname !== "/";
-        if (pathIsMember) {
-            window.location.href = `/#${value}`;
-        } else {
-            event.preventDefault();
-            const section = document.getElementById(value);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
-        };
-    }
 
 
     useEffect(() => {
@@ -70,16 +58,6 @@ const Navbar = () => {
             className={`navBarContainer ${scrolled ? 'scrolled' : ''}`}>
             <div className="navBar">
                 <ul className={`${sora.className}`}>
-                    <motion.li
-                        variants={{
-                            animate: { opacity: 1, x: 0 }
-                        }}
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={controls}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                    >
-                        <a href="#" onClick={(e) => scrollTo(e, "about")} >About Us</a>
-                    </motion.li>
 
                     <motion.li
                         variants={{
@@ -87,9 +65,9 @@ const Navbar = () => {
                         }}
                         initial={{ opacity: 0, x: -100 }}
                         animate={controls}
-                        transition={{ duration: 0.4, delay: 0.1 }}
+                        transition={{ duration: 0.4 }}
                     >
-                        <a href="#" onClick={(e) => scrollTo(e, "team")}>Team</a>
+                        <a href="/">Donaciones</a>
                     </motion.li>
 
                     <motion.li
@@ -100,7 +78,7 @@ const Navbar = () => {
                         animate={controls}
                         transition={{ duration: 0.4 }}
                     >
-                        <a href="#" onClick={(e) => scrollTo(e, "calendar")}>Calendar</a>
+                        <a href="/calendario" >Calendario</a>
                     </motion.li>
 
                     <motion.li
@@ -130,18 +108,7 @@ const Navbar = () => {
                         animate={controls}
                         transition={{ duration: 0.4 }}
                     >
-                        <a href="/galeria">Galery</a>
-                    </motion.li>
-
-                    <motion.li
-                        variants={{
-                            animate: { opacity: 1, x: 0 }
-                        }}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={controls}
-                        transition={{ duration: 0.4, delay: 0.1 }}
-                    >
-                        <a href="#" onClick={(e) => scrollTo(e, "sponsors")}>Sponsors</a>
+                        <a href="/galeria">Galeria</a>
                     </motion.li>
 
                     <motion.li
@@ -153,7 +120,7 @@ const Navbar = () => {
                         animate={controls}
                         transition={{ duration: 0.4, delay: 0.2 }}
                     >
-                        <a className="market" href="">Market</a>
+                        <a className="market" href="/">Tienda</a>
                     </motion.li>
                 </ul>
             </div>

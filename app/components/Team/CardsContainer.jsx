@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import jorge from "../../../public/assets/Jorge.jpg"
+import ale from "../../../public/assets/galery/ale.png"
+import klaus from "../../../public/assets/galery/klaus.png"
 import tadeo from "../../../public/assets/tadeo.jpg"
 
 import { sora } from '@/app/fonts'
@@ -15,6 +17,9 @@ const CardsContainer = () => {
     const Ale = "Alejandro Gherghi"
     const Klaus = "Klaus Lange"
     const Martin = "Martin Magiaterra"
+    const Yezica = "Yezica Perez Ravelo"
+    const Jose = "José Riera"
+    const Abril = "Abril Gonzalez Guerra"
 
     const ref = useRef()
     const controls = useAnimation();
@@ -161,12 +166,12 @@ const CardsContainer = () => {
                         className='imageTeamContainer'>
                         <div className='shadowEffect'></div>
                         <Image
-                            src={jorge}
+                            src={ale}
                             width={1200}
                             height={1200}
                             quality={100}
                             priority={true}
-                            alt='jorge'
+                            alt='alejandro'
                             className='imagenTeam'
                         />
                     </motion.div>
@@ -190,12 +195,12 @@ const CardsContainer = () => {
                         className='imageTeamContainer'>
                         <div className='shadowEffect'></div>
                         <Image
-                            src={jorge}
+                            src={klaus}
                             width={1200}
                             height={1200}
                             quality={100}
                             priority={true}
-                            alt='jorge'
+                            alt='klaus'
                             className='imagenTeam2'
                         />
                     </motion.div>
@@ -230,6 +235,93 @@ const CardsContainer = () => {
                     <div className='teamName'>
                         <h4>Martín Magiaterra</h4>
                         <span>Fisio</span>
+                    </div>
+                </motion.div>
+                <motion.div
+
+                    onClick={() => redirect(Jorge)}
+                    variants={{
+                        animate: { opacity: 1, y: 0 }
+                    }}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={controls}
+                    transition={{ duration: 0.4, delay: 0.7 }}
+                    className='cardContainer'>
+                    <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        className='imageTeamContainer'>
+
+                        <div
+                            className='shadowEffect'></div>
+
+                        <Image
+                            src={jorge}
+                            width={1200}
+                            height={1200}
+                            quality={100}
+                            priority={true}
+                            alt='jorge'
+                            className='imagenTeam'
+                        />
+                    </motion.div>
+                    <div className='teamName'>
+                        <h4>Yezica Perez Ravelo</h4>
+                        <span>PREP.(YOGA)</span>
+                    </div>
+                </motion.div>
+                <motion.div
+                    onClick={() => redirect(Klaus)}
+                    variants={{
+                        animate: { opacity: 1, y: 0 }
+                    }}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={controls}
+                    transition={{ duration: 0.4, delay: 0.8 }}
+                    className='cardContainer'>
+                    <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        className='imageTeamContainer'>
+                        <div className='shadowEffect'></div>
+                        <Image
+                            src={klaus}
+                            width={1200}
+                            height={1200}
+                            quality={100}
+                            priority={true}
+                            alt='klaus'
+                            className='imagenTeam2'
+                        />
+                    </motion.div>
+                    <div className='teamName'>
+                        <h4>José Riera</h4>
+                        <span>Photographer</span>
+                    </div>
+                </motion.div>
+                <motion.div
+                    onClick={() => redirect(Martin)}
+                    variants={{
+                        animate: { opacity: 1, y: 0 }
+                    }}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={controls}
+                    transition={{ duration: 0.4, delay: 0.9 }}
+                    className='cardContainer'>
+                    <motion.div
+                        whileHover={{ scale: 1.03 }} className='imageTeamContainer'>
+                        <div className='shadowEffect3'></div>
+                        <Image
+                            src={jorge}
+                            width={1200}
+                            height={1200}
+                            quality={100}
+                            priority={true}
+                            alt='jorge'
+                            className='imagenTeam3'
+                        />
+                    </motion.div>
+                    <div className='teamName'>
+                        <h4>Abril Gonzalez Guerra</h4>
+                        <span>Photographer</span>
                     </div>
                 </motion.div>
             </div>
