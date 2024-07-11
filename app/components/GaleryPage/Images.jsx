@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import "./galeria.css";
-import fetchImages from '@/app/data';
+import { fetchImages } from '../../data.js';
 import { sora } from '@/app/fonts';
 
 const Page = () => {
