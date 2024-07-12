@@ -1,6 +1,6 @@
 import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "./firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs } from "firebase/firestore";
 
 async function uploadFileFunction(file) {
     const storageRef = ref(storage, 'sponsor/' + file.name);
@@ -8,12 +8,7 @@ async function uploadFileFunction(file) {
     const url = await getDownloadURL(storageRef);
     return url;
 }
-async function fetchImages() {
-    const listRef = ref(storage, '');
-    const res = await listAll(listRef);
-    const urls = await Promise.all(res.items.map(itemRef => getDownloadURL(itemRef)));
-    return urls;
-};
+
 async function uploadImages() {
     const fileInput = document.getElementById('imageUpload');
     const files = fileInput.files;
@@ -59,12 +54,24 @@ async function uploadSponsors(link, file) {
         console.error("Error adding document: ", e);
     }
 }
+async function fetchImages() {
+    const listRef = ref(storage, '');
+    const res = await listAll(listRef);
+    const urls = await Promise.all(res.items.map(itemRef => getDownloadURL(itemRef)));
+    return urls;
+};
+async function fetchDataSponsors() {
+    const documentRef = collection(db, 'sponsors');
 
-
+    const snapshot = await getDocs(documentRef);
+    const sponsorsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    return sponsorsData;
+};
 export {
     fetchImages,
     uploadEvent,
     uploadImages,
-    uploadSponsors
+    uploadSponsors,
+    fetchDataSponsors
 
 };

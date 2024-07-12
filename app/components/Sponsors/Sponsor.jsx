@@ -1,108 +1,81 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useRef, useState } from 'react'
 import "../Sponsors/sponsor.css"
 import Image from 'next/image'
-import fay from "../../../public/assets/fay.png"
-import zik from "../../../public/assets/zik.png"
-import yca from "../../../public/assets/yca3.png"
-import deporte from "../../../public/assets/deporte.png"
-import enard from "../../../public/assets/enard.png"
-import austral from "../../../public/assets/austral.png"
+import { fetchDataSponsors } from '@/app/data'
+
 
 
 const Sponsor = () => {
+
+    const [sponsors, setSponsors] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const intervalRef = useRef(null);
+    const sponsorsPerPage = 3;
+
+    const startInterval = () => {
+        intervalRef.current = setInterval(() => {
+            setCurrentIndex(prevIndex =>
+                (prevIndex + sponsorsPerPage) % sponsors.length
+            );
+        }, 2000);
+    };
+
+    const stopInterval = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    };
+
+    useEffect(() => {
+        startInterval();
+        return () => stopInterval();
+    }, [sponsors.length]);
+
+    const displayedSponsors = sponsors.slice(currentIndex, currentIndex + sponsorsPerPage);
+
+    useEffect(() => {
+        const fetchSponsors = async () => {
+            try {
+                const res = await fetchDataSponsors();
+                setSponsors(res);
+            } catch (error) {
+                console.error('Error fetching sponsors:', error);
+            }
+        };
+
+        fetchSponsors();
+    }, []);
+
     return (
-
-        <section
-            id='sponsors'
-            className='sponsorSection'>
-
+        <section className='sponsorSection'>
             <div className='sponsorsContainer'>
-                <a href="https://fay.org/">
+                {
+                    displayedSponsors.length > 0 &&
+                    displayedSponsors.map((sponsor, index) => (
+                        <a
+                            onMouseOver={stopInterval}
+                            onMouseOut={startInterval}
+                            href={sponsor.link} key={index}>
+                            <div className='logoSponsorContainer'>
+                                <Image
+                                    src={sponsor.url}
+                                    width={1000}
+                                    height={1000}
+                                    alt='logoSponsor'
+                                    className='logoSponsor'
 
-                    <div className='logoSponsorContainer'>
-                        <Image
-                            src={fay}
-                            width={1000}
-                            height={1000}
-                            alt='logoSponsor'
-                            className='logoSponsor'
-
-                        />
-                    </div>
-                </a>
-                <a href="https://es.zhik.com/">
-                    <div className='logoSponsorContainer'>
-                        <Image
-                            style={{ padding: 21 }}
-                            src={zik}
-                            width={1000}
-                            height={1000}
-                            alt='logoSponsor'
-                            className='logoSponsor'
-
-                        />
-                    </div>
-                </a>
-                <a href="https://infoenard.org.ar/">
-
-                    <div className='logoSponsorContainer'>
-                        <Image
-                            style={{ padding: 19 }}
-                            src={enard}
-                            width={1000}
-                            height={1000}
-                            alt='logoSponsor'
-                            className='logoSponsor'
-
-                        />
-                    </div>
-                </a>
-                <a href="https://www.argentina.gob.ar/interior/deportes">
-
-                    <div className='logoSponsorContainer'>
-                        <Image
-                            src={deporte}
-                            width={1000}
-                            height={1000}
-                            alt='logoSponsor'
-                            className='logoSponsor'
-
-                        />
-                    </div>
-                </a>
-                <a href="https://yca.org.ar/">
-
-                    <div className='logoSponsorContainer'>
-                        <Image
-                            style={{ padding: 25 }}
-                            src={austral}
-                            width={1000}
-                            height={1000}
-                            alt='logoSponsor'
-                            className='logoSponsor'
-
-                        />
-                    </div>
-                </a>
-                <a href="https://yca.org.ar/">
-
-                    <div className='logoSponsorContainer'>
-                        <Image
-                            style={{ padding: 25 }}
-                            src={yca}
-                            width={1000}
-                            height={1000}
-                            alt='logoSponsor'
-                            className='logoSponsor'
-
-                        />
-                    </div>
-                </a>
-
+                                />
+                            </div>
+                        </a>
+                    ))
+                }
             </div>
 
 
-        </section>
+
+        </section >
     )
 }
 
