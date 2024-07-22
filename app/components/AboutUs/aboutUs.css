@@ -158,15 +158,18 @@
         align-items: flex-start;
     }
     .aboutUsTextContainer{
+        align-items: center;
         margin-top: 40px;
         width: 100%;
         margin-bottom: 0px;
     }
     .aboutUsTextContainer h2{
-        
+        margin-top: 40px;
+        text-align: center;
         font-size: 1.5rem;
     }
     .aboutUsTextContainer p{
+        text-align: center;
         font-size: 0.6rem;
         line-height: 15px;
     }

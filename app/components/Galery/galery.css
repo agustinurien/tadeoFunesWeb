@@ -137,6 +137,16 @@
     filter: grayscale(100%) brightness(300%);
     opacity: 0.3;
 }
+.effectMobileImage{
+    z-index: 997;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(to top, rgb(255, 255, 255) , rgba(0, 51, 102, 0) 80%);
+
+}
 .sponsorSeparacion{
     position: absolute;
     display: flex;

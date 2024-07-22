@@ -13,11 +13,6 @@ const Equipamiento = () => {
 
                         <h3>Categoria</h3>
 
-                        <div className="categoriaSpan">
-                            <span>Clase olímpica de dos navegantes
-                                (2 male skiff)</span>
-                            <span>Barco de alta velocidad</span>
-                        </div>
                         <p className={`${comfortaa.className}`}>El 49er es una clase internacional de embarcación a vela,
                             diseñada por el australiano Julian Bethwaite. Es clase olímpica
                             desde los Juegos Olímpicos de Sydney 2000. El 49er es un barco
@@ -26,6 +21,11 @@ const Equipamiento = () => {
                             sólidas, facilita el movimiento rápido a través del 49er durante
                             las maniobras. Y una gran velocidad de navegación.
                         </p>
+                        <div className="categoriaSpan">
+                            <span>Clase olímpica de dos navegantes
+                                (2 male skiff)</span>
+                            <span>Barco de alta velocidad</span>
+                        </div>
                     </div>
                     <div className={`${sora.className} embarcacion`}>
 

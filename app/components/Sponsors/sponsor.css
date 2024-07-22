@@ -39,17 +39,18 @@
 }
 @media screen and (max-width: 768px){
     .sponsorsContainer{
-        width: 100%;
+        width: 80%;
         gap: 20px;
 
         justify-content: center;
     }
     .sponsorSection{
         padding-bottom: 50px;
+        height: 200px;
     }
     .logoSponsorContainer{
-        height: 90px;
-        width: 120px;
-        
+        height: 100%;
+        width: auto;
+        padding: 0px 10px;
     }
 }

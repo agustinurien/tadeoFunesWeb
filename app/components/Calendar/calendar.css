@@ -123,11 +123,34 @@
     .backgroundEventos{
         height: 60vh;
     }
+    .futureEvents{
+        width: 90%;
+    }
+    .futureEvents div{
+        width: 100%;
+
+    }
 }
 @media screen and (max-width: 930px){
-    
+    .backgroundEventos{
+        margin-bottom: 60px;
+    }
+    .futureEvents{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        width: 80%;
+        padding-top: 0px;
+    }
+    .futureEvents div{
+        width: 100%;
+        height: 18%;
+    }
 }
 @media screen and (max-width: 560px){
+    .backgroundEventos{
+        margin-bottom: 60px;
+    }
     .sectionCalendar{
         padding-top: 40px;
     }
@@ -142,7 +165,17 @@
     .calendarTextContainer p{
         font-size: 0.7rem;
         line-height: 17px;
-        
+        width: 90%;
     }
-    
+    .futureEvents{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        width: 80%;
+        padding-top: 40px;
+    }
+    .futureEvents div{
+        width: 100%;
+        height: 15%;
+    }
 }

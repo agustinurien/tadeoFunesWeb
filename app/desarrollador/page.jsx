@@ -1,11 +1,9 @@
 "use client"
-
-import { useState } from "react";
+import "../desarrollador/desarrollador.css"
 import { uploadEvent, uploadImages, uploadSponsors } from "../data";
-import Image from "next/image";
+import { sora } from "../fonts";
 
 const page = () => {
-    const [fileData, setFileData] = useState(null);
 
     const upload = async (e) => {
         e.preventDefault();
@@ -35,66 +33,49 @@ const page = () => {
 
 
     return (
-        <section style={{ margin: 170, display: "flex", justifyContent: "space-between" }}>
-            <section>
+        <section className={`${sora.className} contenedorDesarrollador`}>
+            <section className="eventos">
                 <h2>Eventos</h2>
                 <div>
                     <form onSubmit={upload}>
-                        <div>
-                            <label htmlFor="title">Título:</label>
-                            <input type="text" id="title" name="title" />
-                        </div>
-                        <div>
-                            <label htmlFor="date">Fecha:</label>
+                        <div className="datos">
+                            <input type="text" id="title" name="title" placeholder="Nombre del Evento" />
                             <input type="date" id="date" name="date" />
-                        </div>
-                        <div>
-                            <label htmlFor="description">Descripción:</label>
                             <textarea id="description" name="description" rows="4" cols="50"></textarea>
                         </div>
-                        <input type="submit" />
+                        <input type="submit" className={`${sora.className} enviar`} />
                     </form>
                 </div>
                 <div className="contendorEventosEditables">
 
                 </div>
             </section>
-            <section>
+            <section className="imagenes">
                 <h2>Imagenes</h2>
                 <div>
-                    <input type="file" id="imageUpload" multiple />
-                    <button onClick={() => uploadImages()}>Subir Imágenes</button>
+                    <div className="subir">
+                        <input type="file" id="imageUpload" multiple />
+                    </div>
+                    <button className={`${sora.className} enviar`} onClick={() => uploadImages()}>Subir Imágenes</button>
                 </div>
             </section>
-            <section>
+            <section className="sponsors">
                 <h2>Sponsors</h2>
                 <div>
                     <form onSubmit={handleUploadSponsor}>
-                        <input type="text" id="link" />
-                        <input type="file" id="file" />
-                        <input type="submit" />
+                        <div className="datosSponsor">
+                            <input type="text" id="link" placeholder="Link del sponsor (si tiene uno)" />
+                            <div className="subirSponsor">
+                                <input type="file" id="file" />
+                            </div>
+                        </div>
+                        <input type="submit" className={`${sora.className} enviar`} />
                     </form>
 
                 </div>
             </section>
-            <div>
-                {fileData &&
-                    <>
 
-
-                        <p>Imagen subida correctamente</p>
-                        <Image
-                            src={fileData}
-                            width={200}
-                            height={200}
-                            alt="imagen"
-                        />
-                    </>
-                }
-
-
-            </div>
-        </section>
+        </section >
     )
 }
 

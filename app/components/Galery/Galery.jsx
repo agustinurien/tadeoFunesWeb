@@ -63,6 +63,7 @@ const Galery = () => {
                                 alt='galeryInicio'
 
                             />
+                            <div className="effectMobileImage"></div>
                         </div>
                     </>
                     :
