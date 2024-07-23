@@ -3,31 +3,33 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import "./galeria.css";
-import { fetchImages } from '../../data.js';
+import { fetchImages, fetchImages2 } from '../../data.js';
 import { sora } from '@/app/fonts';
 
 const Page = () => {
     const [imageUrls, setImageUrls] = useState([]);
-    const [visibleCount, setVisibleCount] = useState(15);
-    const [visibleImages, setVisibleImages] = useState([]);
+    console.log(imageUrls);
     const [done, setDone] = useState(false);
     const [numberOfColumns, setNumberOfColumns] = useState(3);
-    useEffect(() => {
-        const getData = async () => {
-            const urls = await fetchImages();
-            setImageUrls(urls);
-            setVisibleImages(urls.slice(0, visibleCount));
-            if (visibleCount >= urls.length) {
-                setDone(true)
-                return;
-            }
-        };
-        getData();
-    }, [visibleCount]);
 
-    const loadMoreImages = () => {
-        setVisibleCount(prevCount => prevCount + 15);
+    const [lastImageIndex, setLastImageIndex] = useState(0);
+
+
+    const getData = async () => {
+        const urls = await fetchImages2(lastImageIndex);
+        setImageUrls([...imageUrls, ...urls]);
+        setLastImageIndex(lastImageIndex + urls.length);
+        if (urls.length < 4) {
+            setDone(true)
+            return
+        }
     };
+
+    useEffect(() => {
+
+        getData();
+    }, []);
+
 
     const handleResize = () => {
         if (window.innerWidth < 768) {
@@ -36,6 +38,8 @@ const Page = () => {
             setNumberOfColumns(3);
         }
     };
+
+
     useEffect(() => {
         handleResize();
         window.addEventListener('resize', handleResize);
@@ -46,7 +50,7 @@ const Page = () => {
 
     const columns = Array.from({ length: numberOfColumns }, () => []);
 
-    visibleImages.forEach((url, index) => {
+    imageUrls.forEach((url, index) => {
         columns[index % numberOfColumns].push(url);
     });
 
@@ -79,7 +83,7 @@ const Page = () => {
             {
                 !done &&
                 <div className='loadMoreContainer'>
-                    <button className={`${sora.className} loadMoreButton`} onClick={loadMoreImages}>Cargar más</button>
+                    <button className={`${sora.className} loadMoreButton`} onClick={() => getData()}>Cargar más</button>
                 </div>
             }
         </>

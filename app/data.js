@@ -55,11 +55,25 @@ async function uploadSponsors(link, file) {
     }
 }
 async function fetchImages() {
-    const listRef = ref(storage, '');
-    const res = await listAll(listRef);
-    const urls = await Promise.all(res.items.map(itemRef => getDownloadURL(itemRef)));
-    return urls;
+
 };
+async function fetchImages2(index) {
+    const images = [];
+    try {
+        const limit = 4;
+        const storageRef = ref(storage, '');
+        const listRef = await listAll(storageRef);
+
+        for (let i = index; i < Math.min(listRef.items.length, index + limit); i++) {
+            const url = await getDownloadURL(listRef.items[i]);
+            images.push(url);
+        }
+
+    } catch (e) {
+        console.error("Error fetching images: ", e);
+    }
+    return images;
+}
 async function fetchDataSponsors() {
     const documentRef = collection(db, 'sponsors');
 
@@ -72,6 +86,7 @@ export {
     uploadEvent,
     uploadImages,
     uploadSponsors,
-    fetchDataSponsors
+    fetchDataSponsors,
+    fetchImages2
 
 };
