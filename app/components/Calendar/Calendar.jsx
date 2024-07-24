@@ -5,7 +5,8 @@ import separacion3 from "../../../public/assets/separacion3.png"
 import separacion4 from "../../../public/assets/separacionEquipamiento.png"
 import { comfortaa, sora } from "@/app/fonts"
 import { motion, useInView, useAnimation } from "framer-motion"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+import { fetchDataEvents } from "@/app/data"
 
 const Calendar = () => {
 
@@ -13,6 +14,17 @@ const Calendar = () => {
     const controls = useAnimation();
 
     const isInView = useInView(ref, { once: true })
+
+    const [events, setEvents] = useState([])
+
+    useEffect(() => {
+        const getEvents = async () => {
+            const eventsData = await fetchDataEvents()
+            console.log(eventsData)
+            setEvents(eventsData)
+        }
+        getEvents()
+    }, [])
 
     useEffect(() => {
         if (isInView) {
@@ -68,18 +80,15 @@ const Calendar = () => {
             </div>
             <section ref={ref} className={`${sora.className} backgroundEventos`}>
                 <div className="futureEvents">
-                    <div>
-
-                    </div>
-                    <div>
-
-                    </div>
-                    <div>
-
-                    </div>
-                    <div>
-
-                    </div>
+                    {events.slice(-4).map((evento, index) => {
+                        return (
+                            <div className={`${sora.className} cardEvento`} key={evento.id} >
+                                <h2>{evento.nombre}</h2>
+                                <p>{evento.fecha}</p>
+                            </div>
+                        )
+                    })
+                    }
                 </div>
             </section>
 

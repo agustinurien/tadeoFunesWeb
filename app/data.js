@@ -54,10 +54,8 @@ async function uploadSponsors(link, file) {
         console.error("Error adding document: ", e);
     }
 }
-async function fetchImages() {
 
-};
-async function fetchImages2(index) {
+async function fetchImages(index) {
     const images = [];
     try {
         const limit = 4;
@@ -81,12 +79,19 @@ async function fetchDataSponsors() {
     const sponsorsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     return sponsorsData;
 };
+async function fetchDataEvents() {
+    const documentRef = collection(db, 'events');
+
+    const snapshot = await getDocs(documentRef);
+    const eventsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    return eventsData;
+};
 export {
     fetchImages,
     uploadEvent,
     uploadImages,
     uploadSponsors,
     fetchDataSponsors,
-    fetchImages2
+    fetchDataEvents
 
 };

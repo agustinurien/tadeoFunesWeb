@@ -3,12 +3,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import "./galeria.css";
-import { fetchImages, fetchImages2 } from '../../data.js';
+import { fetchImages } from '../../data.js';
 import { sora } from '@/app/fonts';
 
 const Page = () => {
     const [imageUrls, setImageUrls] = useState([]);
-    console.log(imageUrls);
+
     const [done, setDone] = useState(false);
     const [numberOfColumns, setNumberOfColumns] = useState(3);
 
@@ -16,7 +16,7 @@ const Page = () => {
 
 
     const getData = async () => {
-        const urls = await fetchImages2(lastImageIndex);
+        const urls = await fetchImages(lastImageIndex);
         setImageUrls([...imageUrls, ...urls]);
         setLastImageIndex(lastImageIndex + urls.length);
         if (urls.length < 4) {

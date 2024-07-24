@@ -1,3 +1,44 @@
+.containerForm{
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 89, 255, 0.226), white);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 180px;
+}
+.containerForm form{
+    height: fit-content;
+    width: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(163, 163, 163, 0.493);
+
+}
+.contenedorInput{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.containerForm form input{
+    height: 40px;
+    padding-left: 10px;
+
+}
+.containerForm form button{
+    height: 40px;
+    padding-left: 10px;
+    background-color:  #0549aa;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+
+}
+
 .contenedorDesarrollador{
     padding-top: 120px;
     justify-content: space-around;

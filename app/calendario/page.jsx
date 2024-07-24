@@ -1,3 +1,5 @@
+"use client"
+
 import '../calendario/calendario.css'
 import Events from '../components/eventsCarrousel/Events'
 import { sora } from '../fonts'
@@ -6,46 +8,20 @@ import Image2 from "../../public/assets/calendarioImages/evento2.png"
 import Image3 from "../../public/assets/calendarioImages/evento3.png"
 import Image4 from "../../public/assets/calendarioImages/evento4.png"
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import { fetchDataEvents } from '../data'
 
 const page = () => {
-    const eventos = [
-        {
-            id: 1,
-            nombre: 'Evento 1',
-            fecha: 'dd/mm/aaaa',
-            descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi id obcaecati repellendus, quos, saepe molestias impedit a ex consequuntur tempora similique ad debitis enim magnam aut eos consectetur possimus.'
-        },
-        {
-            id: 2,
-            nombre: 'Evento 2',
-            fecha: 'dd/mm/aaaa',
-            descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi id obcaecati repellendus, quos, saepe molestias impedit a ex consequuntur tempora similique ad debitis enim magnam aut eos consectetur possimus.'
-        },
-        {
-            id: 3,
-            nombre: 'Evento 3',
-            fecha: 'dd/mm/aaaa',
-            descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi id obcaecati repellendus, quos, saepe molestias impedit a ex consequuntur tempora similique ad debitis enim magnam aut eos consectetur possimus.'
-        },
-        {
-            id: 4,
-            nombre: 'Evento 4',
-            fecha: 'dd/mm/aaaa',
-            descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi id obcaecati repellendus, quos, saepe molestias impedit a ex consequuntur tempora similique ad debitis enim magnam aut eos consectetur possimus.'
-        },
-        {
-            id: 5,
-            nombre: 'Evento 4',
-            fecha: 'dd/mm/aaaa',
-            descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi id obcaecati repellendus, quos, saepe molestias impedit a ex consequuntur tempora similique ad debitis enim magnam aut eos consectetur possimus.'
-        },
-        {
-            id: 6,
-            nombre: 'Evento 4',
-            fecha: 'dd/mm/aaaa',
-            descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi id obcaecati repellendus, quos, saepe molestias impedit a ex consequuntur tempora similique ad debitis enim magnam aut eos consectetur possimus.'
+    const [eventos, setEventos] = useState([])
+
+    useEffect(() => {
+        const getEvents = async () => {
+            const eventsData = await fetchDataEvents()
+            setEventos(eventsData)
         }
-    ]
+        getEvents()
+    }, [])
+
     const imagenesEventos = [Image1, Image2, Image3, Image4];
     return (
         <section className='contenedorEventos'>
