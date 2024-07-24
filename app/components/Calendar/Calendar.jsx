@@ -83,7 +83,7 @@ const Calendar = () => {
                     {events.slice(-4).map((evento, index) => {
                         return (
                             <div className={`${sora.className} cardEvento`} key={evento.id} >
-                                <h2>{evento.nombre}</h2>
+                                <h2>{evento.titulo}</h2>
                                 <p>{evento.fecha}</p>
                             </div>
                         )

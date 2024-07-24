@@ -5,7 +5,7 @@
     justify-content: flex-start;
     width: 100%;
     height: fit-content;
-    padding-top: 100px;
+    
     padding-bottom: 20px;
 
 }
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+    padding-top: 100px;
 }
 
 .futureEvents{
@@ -37,8 +38,14 @@
     box-shadow: 0px 4px 10px rgba(82, 82, 82, 0.356);   
     width: 22%;
     height: 100%;
-    padding-top: 30px;
+    padding-top: 20px;
     color:  #0549aa;
+}
+.cardEvento h2{
+    text-align: center;
+    width: 70%;
+    font-size: 1.2rem;
+    height: 30%;
 }
 .futureEvents h2{
     padding-bottom: 10px;
@@ -118,4 +125,48 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+@media (max-width: 1260px) {
+    .cardEvento {
+        justify-content: space-between;
+        
+    }
+    .futureEvents{
+        height: 250px;
+    }
+    .cardEvento h2{
+        
+        width: 90%;
+        font-size: 1rem;
+        
+    }
+    .cardEvento p{
+        padding-bottom: 20px;
+        
+    }
+    .imageDesignCalendario{
+        display: none;
+    }
+}
+@media (max-width: 1100px) {
+    .backgroundEventos{
+        display: none;
+    }
+    .carrouselAgenda{
+        margin-top: 120px;
+        padding-bottom: 320px;
+    }
+    
+}
+@media (max-width: 560px) {
+    .carrouselAgenda{
+        
+        width: 100%;
+        
+        
+        
+    }
+    .data h2{
+        font-size: 1rem;
+    }
 }

@@ -84,6 +84,9 @@ async function fetchDataEvents() {
 
     const snapshot = await getDocs(documentRef);
     const eventsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    eventsData.sort((a, b) => {
+        return new Date(a.fecha) - new Date(b.fecha);
+    });
     return eventsData;
 };
 export {

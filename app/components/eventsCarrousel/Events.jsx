@@ -91,15 +91,15 @@ const Events = ({ eventos }) => {
                                     scale: 0.9
                                 }}
                                 animate={{
-                                    opacity: selected === evento.id ? 1 : (selected - 1) === evento.id ? 0.1 : 0.5,
-                                    scale: selected === evento.id ? 1 : 0.9
+                                    opacity: selected === (index + 1) ? 1 : (selected - 1) === (index + 1) ? 0.1 : 0.5,
+                                    scale: selected === (index + 1) ? 1 : 0.9
                                 }}
 
-                                className={selected === evento.id ? 'evento selected' : (selected - 1) === evento.id ? 'evento prevSelected' : 'evento'}
+                                className={selected === (index + 1) ? 'evento selected' : (selected - 1) === (index + 1) ? 'evento prevSelected' : 'evento'}
 
                             >
                                 <div className={`${sora.className} data`}>
-                                    <h2 >{evento.nombre}</h2>
+                                    <h2 >{evento.titulo}</h2>
                                     <p>{evento.fecha}</p>
                                 </div>
                                 <p className={`${comfortaa.className} description`}>{evento.descripcion}</p>

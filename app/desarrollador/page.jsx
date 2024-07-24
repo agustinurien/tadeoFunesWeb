@@ -4,6 +4,7 @@ import "../desarrollador/form.css"
 
 import { verifyUser } from '../auth';
 import { sora } from '../fonts';
+import { uploadEvent } from '../data';
 
 
 const page = () => {
@@ -75,8 +76,8 @@ const page = () => {
                             <div>
                                 <form onSubmit={upload}>
                                     <div className="datos">
-                                        <input type="text" id="title" name="title" placeholder="Nombre del Evento" />
-                                        <input type="date" id="date" name="date" />
+                                        <input type="text" id="title" name="title" placeholder="Nombre del Evento" required />
+                                        <input type="number" id="date" name="date" min="1900" max="2100" step="1" placeholder="YYYY" required />
                                         <textarea id="description" name="description" rows="4" cols="50"></textarea>
                                     </div>
                                     <input type="submit" className={`${sora.className} enviar`} />
