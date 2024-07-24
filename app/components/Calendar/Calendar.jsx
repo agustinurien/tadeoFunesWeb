@@ -20,7 +20,7 @@ const Calendar = () => {
     useEffect(() => {
         const getEvents = async () => {
             const eventsData = await fetchDataEvents()
-            console.log(eventsData)
+
             setEvents(eventsData)
         }
         getEvents()

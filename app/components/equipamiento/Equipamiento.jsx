@@ -55,6 +55,7 @@ const Equipamiento = () => {
                         height={3000}
                         alt="barco"
                         className="imageEquip"
+                        priority={true}
                     />
                 </div>
             </section>
@@ -65,6 +66,7 @@ const Equipamiento = () => {
                     height={1000}
                     alt="separacion"
                     className="separacion"
+                    priority={true}
                 />
             </div>
         </div>

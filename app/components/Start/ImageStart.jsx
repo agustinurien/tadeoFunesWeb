@@ -36,6 +36,7 @@ const ImageStart = () => {
                     src={separacion}
                     width={2500}
                     height={1700}
+                    quality={100}
                     priority={true}
                     alt="separacion"
                     className="separacion"

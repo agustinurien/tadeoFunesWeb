@@ -19,7 +19,7 @@ const GaleryRight = () => {
                             width={2200}
                             height={2200}
                             quality={100}
-                            priority={true}
+                            loading="lazy"
                             alt='galeryInicio'
                             className='imagenGalery'
                         />
@@ -35,7 +35,7 @@ const GaleryRight = () => {
                             width={2200}
                             height={2200}
                             quality={100}
-                            priority={true}
+                            loading="lazy"
                             alt='galeryInicio'
                             className='imagenGalery'
                         />
@@ -51,7 +51,7 @@ const GaleryRight = () => {
                         width={2200}
                         height={2200}
                         quality={100}
-                        priority={true}
+                        loading="lazy"
                         alt='galeryInicio'
                         className='imagenGalery'
                     />

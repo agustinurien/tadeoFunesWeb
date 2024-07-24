@@ -9,6 +9,8 @@ import FormFooter from './FormFooter'
 import { comfortaa, sora } from '@/app/fonts'
 import { FaFacebook, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter, FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
+import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
+import { CiCircleChevRight } from "react-icons/ci";
 import { usePathname } from 'next/navigation'
 const Footer = () => {
     const pathname = usePathname();
@@ -58,12 +60,12 @@ const Footer = () => {
                 <div className='socials'>
                     <div className='donaciones'>
                         <h3 className={`${sora.className}`}>Donaciones.</h3>
-                        <a className={`${comfortaa.className} donacionesBoton`} href="/">Apoyanos</a>
+                        <a style={{ display: "flex", alignItems: "center" }} className={`${comfortaa.className} donacionesBoton`} href="/">Apoyanos <CiCircleChevRight style={{ marginLeft: 5 }} /></a>
                     </div>
                     <div className='contacto'>
                         <h3 className={`${sora.className}`}>Contacto.</h3>
-                        <span className={`${comfortaa.className}`}>Tade.funess@gmail.com</span>
-                        <span className={`${comfortaa.className}`}>+ 54 9 11 3208 6274</span>
+                        <span style={{ display: "flex", alignItems: "center" }} className={`${comfortaa.className}`}><MdOutlineEmail style={{ marginRight: 5 }} />Tade.funess@gmail.com</span>
+                        <span style={{ display: "flex", alignItems: "center" }} className={`${comfortaa.className}`}><MdOutlinePhone style={{ marginRight: 5 }} />+ 54 9 11 3208 6274</span>
                     </div>
                     <div className='redes'>
                         <h3 className={`${sora.className}`}>Redes.</h3>

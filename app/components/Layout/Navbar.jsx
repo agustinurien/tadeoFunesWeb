@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import "./layout.css"
-import logo from '../../../public/assets/yca3.png'
+import logo from '../../../public/assets/galery/logo.png'
 
 import { sora } from "@/app/fonts"
 import { useEffect, useRef, useState } from "react"
@@ -66,8 +66,9 @@ const Navbar = () => {
                         initial={{ opacity: 0, x: -100 }}
                         animate={controls}
                         transition={{ duration: 0.4 }}
+                        className="donacionesHeader"
                     >
-                        <a href="/">Donaciones</a>
+                        <a href="/" className="donacionesHeader">Donaciones</a>
                     </motion.li>
 
                     <motion.li

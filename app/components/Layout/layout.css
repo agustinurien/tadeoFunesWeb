@@ -64,7 +64,7 @@
 .logo{
     
     height: auto;
-    width: 65%;
+    width: 42%;
 }
 
 
@@ -133,6 +133,10 @@
     flex-direction: column;
     gap: 10px;
 }
+.donacionesHeader{
+    pointer-events: none;
+    opacity: 0.5;
+}
 .donaciones h3{
     color: aliceblue;
     font-size: 1.9rem;
@@ -142,6 +146,7 @@
 .donaciones span{
     color: rgba(240, 248, 255, 0.658);
     font-size: 0.8rem;
+    
 }
 .redes{
     display: flex;
@@ -270,6 +275,8 @@ input::placeholder, textarea::placeholder {
     }
 
     .donacionesBoton{
+        pointer-events: none;
+        opacity: 0.5;
         font-size: 0.8rem;
         color: rgba(255, 255, 255, 0.747);
     }
@@ -299,7 +306,7 @@ input::placeholder, textarea::placeholder {
     .logo{
         
         height: auto;
-        width: 100%;
+        width: 60%;
     }
 
     .footerTextImage{
@@ -359,7 +366,7 @@ input::placeholder, textarea::placeholder {
     }
     
     .navBar ul{
-        gap: 1%;
+        gap: 3%;
     }
     .navBar li{
         width: 75px;
@@ -367,7 +374,7 @@ input::placeholder, textarea::placeholder {
     }
     .contenedorLogo{
         width: 50px;
-        margin-left: 15px;
+        margin-left: 0px;
     }
 
     .sectionFooter{
@@ -422,7 +429,7 @@ input::placeholder, textarea::placeholder {
 }
 @media screen and (max-width: 560px) {
     .navBar{
-        height: 60px;
+        height: 40px;
     }
     .navBar ul{
         gap: 0%;
