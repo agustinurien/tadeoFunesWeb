@@ -58,7 +58,7 @@ async function uploadSponsors(link, file) {
 async function fetchImages(index) {
     const images = [];
     try {
-        const limit = 4;
+        const limit = 8;
         const storageRef = ref(storage, '');
         const listRef = await listAll(storageRef);
 

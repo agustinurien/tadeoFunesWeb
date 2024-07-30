@@ -5,11 +5,13 @@ import Image from 'next/image';
 import "./galeria.css";
 import { fetchImages } from '../../data.js';
 import { sora } from '@/app/fonts';
+import { AiOutlineReload } from "react-icons/ai";
 
 const Page = () => {
     const [imageUrls, setImageUrls] = useState([]);
 
-    const [done, setDone] = useState(false);
+    const [done, setDone] = useState(true);
+    console.log(done)
     const [numberOfColumns, setNumberOfColumns] = useState(3);
 
     const [lastImageIndex, setLastImageIndex] = useState(0);
@@ -19,8 +21,10 @@ const Page = () => {
         const urls = await fetchImages(lastImageIndex);
         setImageUrls([...imageUrls, ...urls]);
         setLastImageIndex(lastImageIndex + urls.length);
-        if (urls.length < 4) {
-            setDone(true)
+        setDone(false)
+        if (urls.length < 8) {
+            setDone(null)
+
             return
         }
     };
@@ -80,12 +84,21 @@ const Page = () => {
                     </div>
                 ))}
             </section>
-            {
-                !done &&
-                <div className='loadMoreContainer'>
-                    <button className={`${sora.className} loadMoreButton`} onClick={() => getData()}>Cargar más</button>
-                </div>
-            }
+            <div className='buttonContainer'>
+
+                {
+                    done === false ?
+                        <div className='loadMoreContainer'>
+                            <button className={`${sora.className} loadMoreButton`} onClick={() => (getData(), setDone(true))}>Cargar más</button>
+                        </div>
+                        :
+                        done === null ? null :
+                            <div className='loadMoreContainer'>
+                                <AiOutlineReload className='load' />
+                            </div>
+
+                }
+            </div>
         </>
     );
 };

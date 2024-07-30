@@ -31,17 +31,37 @@
 }
 .loadMoreButton{
     background-color: #ffffff;
-    border: 2px solid #003366;
-    color: #001a33;
+    border: 2px solid #0549aa;
+    color: #0549aa;
     padding: 10px 20px;
     cursor: pointer;
 }
 .loadMoreButton:hover{
-    background-color: #003366;
-    border: 2px solid #003366;
+    background-color: #0549aa;
+    border: 2px solid #0549aa;
     color: #ffffff;
 
 }
+
+.buttonContainer{
+    height: 150px;
+}
+
+.load{
+    font-size: 30px;
+    color: #0549aa;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 @media screen and (max-width: 930px){
