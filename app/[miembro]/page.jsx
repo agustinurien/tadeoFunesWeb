@@ -12,6 +12,7 @@ import klaus from "../../public/assets/galery/klaus.png";
 import martin from "../../public/assets/Jorge.jpg";
 
 import { useEffect, useState } from "react";
+import { Router } from "next/router";
 const Card = ({ params }) => {
     const name = decodeURIComponent(params.miembro.replace(/[\[\]']+/g, ''));
     const [member, setMember] = useState({});
@@ -57,8 +58,11 @@ const Card = ({ params }) => {
     ]
     useEffect(() => {
         const member = miembros.find(member => member.name === name);
+
         if (member) {
             setMember(member)
+        } else {
+            window.location.href = "/";
         }
     }, [name]);
 

@@ -284,6 +284,10 @@ input::placeholder, textarea::placeholder {
         color: white;
 
     }
+    .css-1eqdgzv-MuiPaper-root-MuiSnackbarContent-root{
+        background-color: #68bd18;
+        color: white;
+    }
 
 @media screen and (max-width: 1500px) {
     .navBar{

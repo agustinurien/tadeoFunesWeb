@@ -28,8 +28,8 @@ const Calendar = () => {
 
     useEffect(() => {
         if (isInView) {
-
             controls.start("animate")
+            controls.start("animate2")
         }
 
     }, [isInView])
@@ -64,7 +64,7 @@ const Calendar = () => {
                     }}
                     initial="initial"
                     animate={controls}
-                    transition={{ duration: 0.4, delay: 0.2 }}
+                    transition={{ duration: 0.4, delay: 0 }}
                     className={`${sora.className}`}>CALENDARIO</motion.h2>
                 <motion.p
                     variants={{
@@ -73,26 +73,46 @@ const Calendar = () => {
                     }}
                     initial="initial"
                     animate={controls}
-                    transition={{ duration: 0.4 }}
+                    transition={{
+                        duration: 0.4, delay: 0.2
+                    }}
                     className={`${comfortaa.className}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quis. Laudantium natus repellat iste consectetur,
                     quos exercitationem odio doloribus recusandae praesentium, veniam vero provident delectus ea facere velit, voluptas est.</motion.p>
-                <a className={`${sora.className} button`} href="/calendario">ver màs</a>
+                <motion.a
+                    variants={{
+                        animate: { opacity: 1 },
+                        initial: { opacity: 0 }
+                    }}
+                    initial="initial"
+                    animate={controls}
+                    transition={{
+                        duration: 0.4, delay: 0.2
+                    }}
+                    className={`${sora.className} button`} href="/calendario">ver màs</motion.a>
             </div>
             <section ref={ref} className={`${sora.className} backgroundEventos`}>
                 <div className="futureEvents">
                     {events.slice(-4).map((evento, index) => {
                         return (
-                            <div className={`${sora.className} cardEvento`} key={evento.id} >
+                            <motion.div
+                                ref={ref}
+                                variants={{
+                                    animate2: { opacity: 1 },
+                                }}
+                                initial={{ opacity: 0 }}
+                                animate={controls}
+                                transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
+                                className={`${sora.className} cardEvento`} key={evento.id} >
                                 <h2>{evento.titulo}</h2>
                                 <p>{evento.fecha}</p>
-                            </div>
+                            </motion.div>
                         )
                     })
                     }
                 </div>
             </section>
 
-        </section>
+        </section >
     )
 }
 
